@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function WorkWithMe() {
   return (
-    <div className='section'>Work With Me</div>
+    <main className='section min-h-[90vh]'>
+      Work With Me
+    </main>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <nav className='flex justify-between'>
+    <nav className='flex justify-between py-4'>
       <Link href='/'>Raizenamor</Link>
       <div>
         <Link href='/work-with-me'>Work with me</Link>
