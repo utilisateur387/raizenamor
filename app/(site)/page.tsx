@@ -27,8 +27,8 @@ export default async function Home() {
       {/* TESTIMONIALS */}
       <div className="flex">
         {testimonials.map(testimonial => (
-          <div className='text-center'>
-            <p key={testimonial._key}>{testimonial.text}</p>
+          <div className='text-center' key={testimonial._key}>
+            <p>{testimonial.text}</p>
             <p className='mt-2'>{testimonial.author}</p>
           </div>
         ))}
