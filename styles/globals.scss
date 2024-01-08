@@ -31,3 +31,16 @@ nav, footer, .section {
   padding-left: 2em;
   padding-right: 2em;
 }
+
+.btn {
+  background-color: $red;
+  color: $off-white;
+  border-radius: 20px;
+  padding: 0.75em 1.5em;
+  display: inline-block;
+}
+
+.offering {
+  background-color: $beige;
+  padding: 3em;
+}
