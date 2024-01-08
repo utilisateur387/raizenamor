@@ -32,6 +32,10 @@ nav, footer, .section {
   padding-right: 2em;
 }
 
+hr {
+  border-top: solid 1px $red;
+}
+
 .btn {
   background-color: $red;
   color: $off-white;

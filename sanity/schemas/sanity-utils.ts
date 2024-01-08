@@ -34,7 +34,11 @@ export async function getWorkWithMePage(): Promise<WorkWithMePage> {
     groq`*[_type == "workWithMe"][0]{
       _id,
       offerings,
-      faq,
+      "faq": faq[]{
+        question,
+        answer,
+        _key
+      },
       "backgroundImage1": backgroundImage1 {
         "url": asset->url,
         alt,

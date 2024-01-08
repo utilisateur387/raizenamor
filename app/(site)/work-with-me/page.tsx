@@ -8,6 +8,7 @@ export default async function WorkWithMe() {
   const content = await getWorkWithMePage()
   const {
     offerings,
+    faq,
     backgroundImage1,
     backgroundImage2,
   } = content
@@ -22,9 +23,10 @@ export default async function WorkWithMe() {
         width={0}
         height={0}
         className='w-full'
-        sizes='(max-width: 768px) 100vw, 40vw'
+        sizes='100vw'
       />
 
+      {/* OFFERINGS */}
       <section>
         {offerings.map(offering => (
           <div key={offering._key} className='offering mb-6'>
@@ -42,8 +44,22 @@ export default async function WorkWithMe() {
         width={0}
         height={0}
         className='w-full'
-        sizes='(max-width: 768px) 100vw, 40vw'
+        sizes='100vw'
       />
+
+      {/* FAQ */}
+      <section>
+        <hr className='my-6' />
+        {faq.map(entry => (
+          <>
+            <div key={entry._key}>
+              <h3>{entry.question}</h3>
+              <p>{entry.answer}</p>
+            </div>
+            <hr className='my-6' />
+          </>
+        ))}
+      </section>
     </main>
   )
 }

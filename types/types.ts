@@ -40,6 +40,7 @@ export type Offering = {
 }
 
 export type FaqEntry = {
+  _key: string,
   question: string,
   answer: string,
 }

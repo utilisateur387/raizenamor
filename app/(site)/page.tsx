@@ -52,7 +52,7 @@ export default async function Home() {
         width={0}
         height={0}
         className='w-full'
-        sizes='(max-width: 768px) 100vw, 40vw'
+        sizes='100vw'
       />
 
       {/* WORK WITH ME */}
@@ -84,7 +84,7 @@ export default async function Home() {
         width={0}
         height={0}
         className='w-full'
-        sizes='(max-width: 768px) 100vw, 40vw'
+        sizes='100vw'
       />
       
     </main>
