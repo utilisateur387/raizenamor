@@ -13,8 +13,8 @@ const about = {
       type: 'array',
       of: [{ type: 'block' }]
     }, {
-      name: 'headshot',
-      title: 'Headshot image',
+      name: 'portrait',
+      title: 'Portrait',
       type: 'image',
       fields: [
         {

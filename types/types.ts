@@ -44,3 +44,10 @@ export type FaqEntry = {
   question: string,
   answer: string,
 }
+
+export type AboutPage = {
+  _id: string;
+  headline: string,
+  content: PortableTextBlock,
+  portrait: Image;
+}

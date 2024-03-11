@@ -1,6 +1,6 @@
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./client-config";
-import { Homepage, WorkWithMePage } from "@/types/types";
+import { AboutPage, Homepage, WorkWithMePage } from "@/types/types";
 
 export async function getHomepage(): Promise<Homepage> {
   return createClient(clientConfig).fetch(
@@ -52,3 +52,17 @@ export async function getWorkWithMePage(): Promise<WorkWithMePage> {
   )
 }
 
+export async function getAboutPage(): Promise<AboutPage> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "about"][0]{
+      _id,
+      headline,
+      content,
+      "portrait": portrait {
+        "url": asset->url,
+        alt
+      }
+    }
+    `
+  )
+}

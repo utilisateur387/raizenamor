@@ -21,6 +21,7 @@
 body {
   color: $red;
   background: $off-white;
+  // font-family: var(--font-ibm);
 }
 
 footer {
@@ -31,19 +32,32 @@ nav, footer, .section {
   padding-left: 2em;
   padding-right: 2em;
 }
-
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+}
+h2 {
+  font-size: 2em;
+}
 hr {
   border-top: solid 1px $red;
 }
-
+.section-padding {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
 .btn {
   background-color: $red;
   color: $off-white;
   border-radius: 20px;
   padding: 0.75em 1.5em;
   display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-
+.quote {
+ font-size: 2em;
+}
 .offering {
   background-color: $beige;
   padding: 3em;
