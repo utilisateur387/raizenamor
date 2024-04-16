@@ -5,7 +5,7 @@ import React from 'react'
 
 export default async function About() {
   const contentAbout = await getAboutPage()
-  console.log(contentAbout);
+  // console.log(contentAbout);
   
   return (
     <main className='section min-h-[90vh]'>

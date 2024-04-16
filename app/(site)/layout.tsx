@@ -3,10 +3,16 @@ import '@styles/globals.scss'
 import Navbar from '@/components/Navbar'
 import { IBM_Plex_Mono  } from 'next/font/google'
 import Footer from '@/components/Footer'
+import localFont from '@next/font/local'
 
 const ibm = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: '400'
+})
+
+const gtSuper = localFont({
+  src: '../../styles/fonts/GTSuperDs-Lt.ttf',
+  variable: '--font-gt'
 })
 
 export const metadata: Metadata = {
@@ -21,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ibm.className}>
+      <body className={`${ibm.className} ${gtSuper.variable}`}>
         <Navbar />
         {children}
         <Footer />

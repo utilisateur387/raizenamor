@@ -1,3 +1,4 @@
+import FaqAccordion from '@/components/FaqAccordion';
 import { getWorkWithMePage } from '@/sanity/schemas/sanity-utils';
 import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
@@ -29,10 +30,14 @@ export default async function WorkWithMe() {
       {/* OFFERINGS */}
       <section>
         {offerings.map(offering => (
-          <div key={offering._key} className='offering mb-6'>
-            <h2>{offering.title}</h2>
-            <Link href='/' className='btn'>Book</Link>
-            <PortableText value={offering.description} />
+          <div key={offering._key} className='offering mb-6 block md:flex'>
+            <div className='w-full md:w-6/12 mb-8 md:mb-0'>
+              <h2 className='offerings-title uppercase max-w-sm mb-5'>{offering.title} <span className='offering-duration'>{offering.duration}</span></h2>
+              <Link href='/' className='btn'>Book</Link>
+            </div>
+            <div className='w-full md:w-6/12'>
+              <PortableText value={offering.description} />
+            </div>
           </div>
         ))}
       </section>
@@ -50,15 +55,7 @@ export default async function WorkWithMe() {
       {/* FAQ */}
       <section>
         <hr className='my-6' />
-        {faq.map(entry => (
-          <>
-            <div key={entry._key}>
-              <h3>{entry.question}</h3>
-              <p>{entry.answer}</p>
-            </div>
-            <hr className='my-6' />
-          </>
-        ))}
+        <FaqAccordion faq={faq} />
       </section>
     </main>
   )
