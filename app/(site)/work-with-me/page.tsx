@@ -13,7 +13,7 @@ export default async function WorkWithMe() {
     backgroundImage1,
     backgroundImage2,
   } = content
-  console.log(content);
+  // console.log(content);
   
   return (
     <main className='section min-h-[90vh]'>
