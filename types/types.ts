@@ -36,6 +36,7 @@ export type Offering = {
   _key: string,
   title: string,
   duration: string,
+  calendly: string,
   description: PortableTextBlock,
 }
 

@@ -20,6 +20,10 @@ const workWithMe = {
               title: 'Duration',
               type: 'string',
             }, {
+              name: 'calendly',
+              title: 'Calendly link',
+              type: 'string',
+            }, {
               name: 'description',
               title: 'Description',
               type: 'array',

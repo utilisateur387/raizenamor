@@ -1,9 +1,11 @@
+
 import FaqAccordion from '@/components/FaqAccordion';
+import CalendlyEmbed from '@/components/CalendlyEmbed';
 import { getWorkWithMePage } from '@/sanity/schemas/sanity-utils';
 import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect } from 'react';
 
 export default async function WorkWithMe() {
   const content = await getWorkWithMePage()
@@ -13,10 +15,10 @@ export default async function WorkWithMe() {
     backgroundImage1,
     backgroundImage2,
   } = content
-  // console.log(content);
-  
+  console.log(content);
+
   return (
-    <main className='section min-h-[90vh]'>
+    <main id='offerings' className='section min-h-[90vh]'>
       {/* BACKGROUND IMAGE */}
       <Image 
         src={backgroundImage1?.url} 
@@ -33,7 +35,9 @@ export default async function WorkWithMe() {
           <div key={offering._key} className='offering mb-6 block md:flex'>
             <div className='w-full md:w-6/12 mb-8 md:mb-0'>
               <h2 className='offerings-title uppercase max-w-sm mb-5'>{offering.title} <span className='offering-duration'>{offering.duration}</span></h2>
-              <Link href='/' className='btn'>Book</Link>
+              {/* <Link href='/' className='btn'> */}
+                <CalendlyEmbed url={offering.calendly} />
+              {/* </Link> */}
             </div>
             <div className='w-full md:w-6/12'>
               <PortableText value={offering.description} />
@@ -41,6 +45,7 @@ export default async function WorkWithMe() {
           </div>
         ))}
       </section>
+
 
       {/* BACKGROUND IMAGE */}
       <Image 
