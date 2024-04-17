@@ -1,25 +1,27 @@
 'use client'
 
 import React, { useState } from 'react'
+import { FaqEntry } from "@/types/types";
+
+interface Props {
+  faq: FaqEntry[];
+}
 
 export default function FaqAccordion({
   faq
-}) {
+}: Props) {
   
   const [accordion, setAccordion] = useState(
     Object.assign({}, faq.map(() => {
       return 'none'
     }))
   ) 
-  console.log(accordion);
   
-  const handleClickQuestion = (e) => {
-    console.log(e)
-    const index = e.target.dataset['index']
+  const handleClickQuestion = (event: any) => {    
+    const index = event.target.dataset['index']
     const newAccordion = {...accordion};
     newAccordion[index] = accordion[index] == 'none' ? 'block' : 'none';
     setAccordion(newAccordion)
-    console.log(accordion);
   } 
 
   return (
@@ -30,6 +32,7 @@ export default function FaqAccordion({
               <div 
                 className='flex justify-between items-center faq-entry'
                 onClick={handleClickQuestion} 
+                // onClick={(e => console.log(e))}
                 data-index={index}
                 >
                 <h3 className='question' data-index={index}>{entry.question}</h3>

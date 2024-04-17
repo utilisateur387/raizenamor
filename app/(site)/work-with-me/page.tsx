@@ -34,7 +34,7 @@ export default async function WorkWithMe() {
         {offerings.map(offering => (
           <div key={offering._key} className='offering mb-6 block md:flex'>
             <div className='w-full md:w-6/12 mb-8 md:mb-0'>
-              <h2 className='offerings-title uppercase max-w-sm mb-5'>{offering.title} <span className='offering-duration'>{offering.duration}</span></h2>
+              <h2 className='offerings-title uppercase max-w-md mb-5'>{offering.title} <span className='offering-duration'>{offering.duration}</span></h2>
               {/* <Link href='/' className='btn'> */}
                 <CalendlyEmbed url={offering.calendly} />
               {/* </Link> */}

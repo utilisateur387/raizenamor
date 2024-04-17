@@ -13,7 +13,7 @@ const CalendlyEmbed = ({ url }) => {
       "https://assets.calendly.com/assets/external/widget.js"
     );
     head.appendChild(script);
-    setRoot(document.getElementById("offerings-div"))
+    setRoot(document.getElementById("offerings"))
   }, []);
 
   return (
@@ -22,7 +22,6 @@ const CalendlyEmbed = ({ url }) => {
       // data-url={url}
       // style={{ minHeight: "650px", width: "100%" }}
       className='btn'
-      id="offerings-div"
     >
       <PopupButton
         url={url}
