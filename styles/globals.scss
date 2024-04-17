@@ -3,6 +3,7 @@
 @use 'tailwindcss/utilities';
 
 @import '@styles/variables.scss';
+@import '@styles/beziers.scss';
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -35,6 +36,9 @@ nav {
   letter-spacing: 0.5px;
   line-height: 1em;
 }
+.border {
+  border: solid 1px $red;
+}
 h1 {
   font-size: 3em;
   line-height: 1em;
@@ -49,8 +53,8 @@ hr {
   border-top: solid 1px $red;
 }
 .section-padding {
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 6em;
+  padding-bottom: 6em;
 }
 .btn {
   background-color: $red;
@@ -63,7 +67,12 @@ hr {
 }
 .quote {
  font-size: 2em;
- font-family: var(--font-gt);
+ font-family: $gt;
+ max-width: 800px;
+ line-height: 1.2em;
+ font-style: italic;
+ margin: 0 auto;
+
 }
 .offering {
   background-color: $beige;
@@ -92,4 +101,10 @@ hr {
 }
 .faq-entry {
   cursor: pointer;
+}
+.home-banner {
+  min-height: 80vh;
+}
+.home-banner-intro div {
+  max-width: 700px;
 }

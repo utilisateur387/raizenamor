@@ -1,0 +1,41 @@
+.outside {
+  position: relative;
+  width: 100vw;
+  height: 70vmin;
+  background: #C8523C;
+  -webkit-clip-path: url(#myCurve);
+  clip-path: url(#myCurve);
+  /* -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%); */
+}
+.inside {
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  right: 0px;
+  bottom: 1px;
+  background: #E9E2D0;
+  -webkit-clip-path: url(#myCurve);
+  clip-path: url(#myCurve);
+  // padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  // background: url(https://images.unsplash.com/photo-1505129013025-ecf8f0168373?q=80&w=3280&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
+.inside2 {
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  right: 0px;
+  bottom: 1px;
+  background: #E9E2D0;
+  -webkit-clip-path: url(#myCurve);
+  clip-path: url(#myCurve);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
