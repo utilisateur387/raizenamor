@@ -35,6 +35,13 @@ nav {
   font-size: 1.1em;
   letter-spacing: 0.5px;
   line-height: 1em;
+  position: relative;
+  width: 100vw;
+  height: 90px;
+  background: $red;
+  -webkit-clip-path: url(#navCurve);
+  clip-path: url(#navCurve);
+  z-index: 1000;
 }
 .border {
   border: solid 1px $red;
