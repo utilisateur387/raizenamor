@@ -115,3 +115,8 @@ hr {
 .home-banner-intro div {
   max-width: 700px;
 }
+.contact-form {
+  input[type=text], textarea {
+    background: $off-white;
+  }
+}
