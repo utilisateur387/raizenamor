@@ -93,7 +93,10 @@ export default function ContactForm() {
         required
         onChange={e => handleChange(e, "message")}
       />
-      <input type="submit" value="Send" />
+      <input 
+        type="submit" 
+        value="Send" 
+        className='btn'/>
     </form>
   )
 }

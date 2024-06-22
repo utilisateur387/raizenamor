@@ -19,8 +19,10 @@ export default function FaqAccordion({
   
   const handleClickQuestion = (event: any) => {    
     const index = event.target.dataset['index']
-    const newAccordion = {...accordion};
-    newAccordion[index] = accordion[index] == 'none' ? 'block' : 'none';
+    let newAccordion = {}
+    Object.keys(accordion).forEach((key) => {
+      newAccordion[key] = (key == index) ? 'block' : 'none'
+    });
     setAccordion(newAccordion)
   } 
 
