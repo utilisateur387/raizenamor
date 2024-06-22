@@ -17,12 +17,6 @@ const CalendlyEmbed = ({ url }) => {
   }, []);
 
   return (
-    <div
-      // className="calendly-inline-widget"
-      // data-url={url}
-      // style={{ minHeight: "650px", width: "100%" }}
-      className='btn'
-    >
       <PopupButton
         url={url}
         /*
@@ -31,8 +25,8 @@ const CalendlyEmbed = ({ url }) => {
          */
         rootElement={root}
         text="BOOK"
+        className='btn w-full md:w-60 text-center'
       />
-    </div>
   );
 };
 

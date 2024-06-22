@@ -39,15 +39,25 @@ export default async function WorkWithMe() {
         {/* OFFERINGS */}
         <section>
           {offerings.map(offering => (
-            <div key={offering._key} className='offering mb-6 block md:flex'>
-              <div className='w-full md:w-6/12 mb-8 md:mb-0'>
-                <h2 className='offerings-title uppercase max-w-md mb-5'>{offering.title} <span className='offering-duration'>{offering.duration}</span></h2>
-                {/* <Link href='/' className='btn'> */}
+            <div key={offering._key} className='offering mb-6 block md:flex space-x-0 md:space-x-4'>
+              <div className='w-full md:w-6/12 mb-8 md:mb-0 flex flex-col justify-between'>
+                <div>
+                  <h2 className='offerings-title uppercase max-w-md mb-2'>{offering.title}</h2>
+                  <h3 className='offering-duration mb-4'>{offering.duration}</h3>
+                </div>
+                
+                {/* Book button desktop */}
+                <div className='hidden md:block mb-4'>
                   <CalendlyEmbed url={offering.calendly} />
-                {/* </Link> */}
+                </div>
               </div>
               <div className='w-full md:w-6/12'>
                 <PortableText value={offering.description} />
+                
+                {/* Book button mobile */}
+                <div className='block md:hidden mt-5'>
+                  <CalendlyEmbed url={offering.calendly} />
+                </div>
               </div>
             </div>
           ))}

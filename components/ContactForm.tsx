@@ -44,7 +44,7 @@ export default function ContactForm() {
             type="text"
             name='first-name'
             placeholder='First name'
-            className='w-full rounded-md p-2'
+            className='w-full py-2'
             value={firstName}
             required
             onChange={e => handleChange(e, "firstName")}
@@ -55,7 +55,7 @@ export default function ContactForm() {
             type="text"
             name='last-name'
             placeholder='Last name'
-            className='w-full  rounded-md p-2'
+            className='w-full py-2'
             value={lastName}
             onChange={e => handleChange(e, "lastName")}
           />
@@ -68,7 +68,7 @@ export default function ContactForm() {
             type="text"
             name='email'
             placeholder='Email'
-            className='w-full  rounded-md p-2'
+            className='w-full py-2'
             value={email}
             required
             onChange={e => handleChange(e, "email")}
@@ -79,7 +79,7 @@ export default function ContactForm() {
             type="text"
             name='phone'
             placeholder='Phone number'
-            className='w-full  rounded-md p-2'
+            className='w-full py-2'
             value={phone}
             onChange={e => handleChange(e, "phone")}
           />
@@ -88,7 +88,7 @@ export default function ContactForm() {
       <textarea 
         name='message'
         placeholder='Message'
-        className='w-full  rounded-md p-2'
+        className='w-full py-2'
         value={message}
         required
         onChange={e => handleChange(e, "message")}

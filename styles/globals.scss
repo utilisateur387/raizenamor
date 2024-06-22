@@ -90,7 +90,7 @@ hr {
   font-size: 2.5em;
 }
 .offering-duration {
-  font-size: 0.6em;
+  font-size: 1.1em;
   font-style: italic;
   text-transform: lowercase;
 }
@@ -117,9 +117,17 @@ hr {
 }
 .contact-form {
   input[type=text], textarea {
-    background: $off-white;
+    background: $red;
+    border-bottom: solid 1px $off-white;
+    color: $off-white;
+    // background: $off-white;
+  }
+  input::placeholder, textarea::placeholder {
+    color: $off-white;
+    opacity: 0.7;
   }
   input[type=submit] {
-    background-color: #904646;
+    background-color: $off-white;
+    color: $red
   }
 }

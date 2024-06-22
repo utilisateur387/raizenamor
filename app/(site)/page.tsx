@@ -22,7 +22,7 @@ export default async function Home() {
 
       <div className="hp-banner-outside outside" style={{ height: '80vh' }}>
         <div className="hp-banner-inside inside">
-          <section className="home-banner flex space-x-6 w-full">
+          <section className="home-banner md:flex space-x-6 w-full">
             <div className="w-5/12" style={{ 
               backgroundImage: `url(${headshot?.url}`,
               backgroundPosition: 'center',
