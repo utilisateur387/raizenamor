@@ -22,18 +22,33 @@ export default async function Home() {
 
       <div className="hp-banner-outside outside" style={{ height: '80vh' }}>
         <div className="hp-banner-inside inside">
-          <section className="home-banner md:flex space-x-6 w-full">
-            <div className="w-5/12" style={{ 
+          <section className="home-banner flex flex-col md:flex-row md:space-x-6 w-full">
+
+            <div className="w-full md:w-5/12" style={{ 
               backgroundImage: `url(${headshot?.url}`,
               backgroundPosition: 'center',
-              backgroundSize: 'cover'
+              backgroundSize: 'cover',
               }}></div>
 
-            <div className="home-banner-intro w-7/12 flex items-center justify-center flex-col section-padding px-24">
-              <div className='flex gap-5 flex-col items-start'>
-                <h1 className='uppercase'>{headline}</h1>
-                <p>{introParagraph}</p>
-                <Link href='/about' className='btn'>Learn more</Link>
+            <div className="home-banner-intro w-full block md:w-7/12 md:flex items-center justify-center flex-col section-padding">
+              <div className='flex gap-5 flex-col items-start items-center md:items-start'>
+
+                {/* HEADSHOT MOBILE */}
+                <div className='container-headshot rounded-full mx-auto flex items-center mt-16 mb-8 md:hidden'>
+                  <Image 
+                    src={headshot?.url || ''} 
+                    alt={headshot?.url || ''} 
+                    width={0}
+                    height={0}
+                    className='w-full'
+                    sizes='100vw'
+                  />
+                </div>
+
+                {/* BANNER TEXT */}
+                <h1 className='uppercase text-center md:text-left'>{headline}</h1>
+                <p className='text-center md:text-left'>{introParagraph}</p>
+                <Link href='/about' className='btn text-center md:text-left'>Learn more</Link>
               </div>
             </div>
           </section>
@@ -93,14 +108,16 @@ export default async function Home() {
       </div>
 
       {/* BACKGROUND IMAGE */}
-      <Image 
-        src={backgroundImage2.url || ''} 
-        alt={backgroundImage2.alt || ''} 
-        width={0}
-        height={0}
-        className='w-full'
-        sizes='100vw'
-      />
+      <div className='container-bg2'>
+        <Image 
+          src={backgroundImage2.url || ''} 
+          alt={backgroundImage2.alt || ''} 
+          width={0}
+          height={0}
+          className='w-full'
+          sizes='100vw'
+        />
+      </div>
 
       <svg width="0" height="0">
         <defs>

@@ -1,0 +1,19 @@
+
+.container-bg2 {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.container-headshot {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .container-headshot {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+}

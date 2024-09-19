@@ -4,6 +4,7 @@
 
 @import '@styles/variables.scss';
 @import '@styles/beziers.scss';
+@import '@styles/homepage.scss';
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -48,8 +49,13 @@ nav {
 }
 h1 {
   font-size: 3em;
-  line-height: 1em;
+  line-height: 1.1em;
   font-family: $gt;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5em;
+    line-height: 1.2em;
+  }
 }
 h2 {
   font-size: 2em;
@@ -60,8 +66,11 @@ hr {
   border-top: solid 1px $red;
 }
 .section-padding {
-  padding-top: 6em;
-  padding-bottom: 6em;
+  padding: 6em 6em;
+
+  @media screen and (max-width: 768px) {
+    padding: 6em 2em;
+  }
 }
 .btn {
   background-color: $red;
@@ -114,6 +123,11 @@ hr {
 }
 .home-banner-intro div {
   max-width: 700px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 470px;
+    margin: 0 auto;
+  }
 }
 .contact-form {
   input[type=text], textarea {
