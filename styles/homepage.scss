@@ -17,3 +17,25 @@
     overflow: hidden;
   }
 }
+
+.hp-bg2 {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  top: -30;
+  
+  @media screen and (max-width: 768px) {
+    right: 0;
+    left: unset !important;
+  }
+}
+
+.testimonials::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  min-width: 300px;
+}

@@ -6,38 +6,56 @@ import React, { useState } from 'react'
 // export type event = keyof GlobalEventHandlersEventMap;
 
 export default function ContactForm() {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [phone, setPhone] = useState('')
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
+    phone: '',
+  })
+  // const [firstName, setFirstName] = useState('')
+  // const [lastName, setLastName] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [message, setMessage] = useState('')
+  // const [phone, setPhone] = useState('')
+
+  const handleSubmit = async (e: event) => {
+    console.log(e)
+
+    e.preventDefault();
+  }
 
   const handleChange = (e: event, input: string) => {
     const value = e.target.value
+    setFormData({...formData, [input]: value})
 
-    switch (input) {
-      case 'firstName':
-        setFirstName(value)
-        break
-      case 'lastName':
-        setLastName(value)
-        break
-      case 'email':
-        setEmail(value)
-        break
-      case 'message':
-        setMessage(value)
-        break
-      case 'phone':
-        setPhone(value)
-        break
-      default :
-        break
-    }
+  //   switch (input) {
+  //     case 'firstName':
+  //       setFirstName(value)
+  //       break
+  //     case 'lastName':
+  //       setLastName(value)
+  //       break
+  //     case 'email':
+  //       setEmail(value)
+  //       break
+  //     case 'message':
+  //       setMessage(value)
+  //       break
+  //     case 'phone':
+  //       setPhone(value)
+  //       break
+  //     default :
+  //       break
+  //   }
   }
 
   return (
-    <form action="" className='contact-form flex flex-col space-y-3'>
+    <form 
+      action="" 
+      className='contact-form flex flex-col space-y-3'
+      onSubmit={handleSubmit}
+      >
       <div className="block space-y-3 md:space-y-0 md:flex md:space-x-3">
         <div className="md:w-6/12">
           <input 
@@ -45,7 +63,7 @@ export default function ContactForm() {
             name='first-name'
             placeholder='First name'
             className='w-full py-2'
-            value={firstName}
+            value={formData.firstName}
             required
             onChange={e => handleChange(e, "firstName")}
           />
@@ -56,7 +74,7 @@ export default function ContactForm() {
             name='last-name'
             placeholder='Last name'
             className='w-full py-2'
-            value={lastName}
+            value={formData.lastName}
             onChange={e => handleChange(e, "lastName")}
           />
         </div>
@@ -69,7 +87,7 @@ export default function ContactForm() {
             name='email'
             placeholder='Email'
             className='w-full py-2'
-            value={email}
+            value={formData.email}
             required
             onChange={e => handleChange(e, "email")}
           />
@@ -80,7 +98,7 @@ export default function ContactForm() {
             name='phone'
             placeholder='Phone number'
             className='w-full py-2'
-            value={phone}
+            value={formData.phone}
             onChange={e => handleChange(e, "phone")}
           />
         </div>
@@ -89,7 +107,7 @@ export default function ContactForm() {
         name='message'
         placeholder='Message'
         className='w-full py-2'
-        value={message}
+        value={formData.message}
         required
         onChange={e => handleChange(e, "message")}
       />

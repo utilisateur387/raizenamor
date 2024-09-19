@@ -66,8 +66,8 @@ export default async function Home() {
         <div className="top-bottom-inside inside">
           <section className="flex section" style={{height: '-webkit-fill-available'}}>
 
-            <div className="outside right-outside z-20">
-              <div className="right-inside w-7/12 flex flex-col items-start justify-center gap-5 section-padding">
+            <div className="outside right-outside wwm z-20">
+              <div className="right-inside w-7/12 flex flex-col items-start justify-center gap-5 section-padding !pr-16 md:pr-0">
                 <h2 className='uppercase'>Work with me</h2>
                 <p>{workWithMe}</p>
                 <Link href='/work-with-me' className='btn'>Discover my offerings</Link>
@@ -75,7 +75,7 @@ export default async function Home() {
             </div>
 
             {/* BACKGROUND IMAGE */}
-            <div className="w-6/12" style={{ 
+            <div className="w-2/12 md:w-6/12 hp-bg2" style={{ 
               backgroundImage: `url(${backgroundImage1.url}`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
@@ -83,6 +83,7 @@ export default async function Home() {
               height: '100%',
               left: '50%',
               top: -30,
+              right: 0,
               }}>
                 {/* <Image 
                   src={backgroundImage1.url} 
@@ -98,9 +99,9 @@ export default async function Home() {
 
 
       {/* TESTIMONIALS */}
-      <div className="flex section-padding section">
+      <div className="section-padding section testimonials flex justify-start overflow-x-scroll space-x-12">
         {testimonials.map(testimonial => (
-          <div className='text-center' key={testimonial._key}>
+          <div className='testimonial-card text-center inline-block' key={testimonial._key}>
             <p>{testimonial.text}</p>
             <p className='mt-2'>{testimonial.author}</p>
           </div>
