@@ -6,6 +6,7 @@
 @import '@styles/beziers.scss';
 @import '@styles/homepage.scss';
 @import '@styles/work-with-me.scss';
+@import '@styles/about.scss';
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -28,6 +29,7 @@ body {
 footer {
   background-color: $red;
   color: $off-white;
+  z-index: 20;
 }
 nav, footer, .section {
   padding-left: 2em;
@@ -63,9 +65,11 @@ h1 {
   }
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.7em;
+  letter-spacing: 1px;
   font-family: $gt;
   line-height: 1em;
+  text-transform: uppercase;
 }
 hr {
   border-top: solid 1px $red;

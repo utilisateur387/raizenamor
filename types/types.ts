@@ -50,10 +50,16 @@ export type AboutPage = {
   _id: string,
   headline: string,
   content: PortableTextBlock,
-  portrait: Image;
+  portrait: Image,
+  certificationText: PortableTextBlock,
+  certifications: [Certification],
 }
 
 export type General = {
   _id: string,
   instagram: string,
+}
+
+export type Certification = {
+  title: string,
 }

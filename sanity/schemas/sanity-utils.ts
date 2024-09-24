@@ -61,7 +61,11 @@ export async function getAboutPage(): Promise<AboutPage> {
       "portrait": portrait {
         "url": asset->url,
         alt
-      }
+      },
+      certificationText,
+      "certifications": certifications[]{
+        title
+      },
     }
     `
   )

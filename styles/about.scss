@@ -1,0 +1,25 @@
+.certification-list {
+  li {
+    list-style-type: initial;
+    font-size: 2em;
+    font-family: $gt;
+    line-height: 1.2em;
+    padding-bottom: 16px;
+  }
+}
+section.certifications {
+  z-index: 1;
+  &::before {
+    content: "";
+    background-color: $beige;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 40% 20% 0% 0%; /* Asymmetrical organic feel */
+    transform: rotate(3deg) scaleX(150%) scaleY(110%);/* A slight rotation for an organic appearance */
+    transition: all ease 1s;
+  }
+}
