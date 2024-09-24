@@ -21,8 +21,15 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: event) => {
     console.log(e)
-
     e.preventDefault();
+
+    const res = await fetch('/api/mailchimp', {
+      body: JSON.stringify(formData),
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
   }
 
   const handleChange = (e: event, input: string) => {

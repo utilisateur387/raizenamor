@@ -51,6 +51,17 @@ const config = defineConfig({
                   .schemaType("workWithMe")
                   .documentId("workWithMe")
               ),
+            S.listItem()
+              .title("General")
+              .id("general")
+              .child(
+                // Instead of rendering a list of documents, we render a single
+                // document, specifying the `documentId` manually to ensure
+                // that we're editing the single instance of the document
+                S.document()
+                  .schemaType("general")
+                  .documentId("general")
+              ),
 
 
             // orderableDocumentListDeskItem({type: 'offerings', S, context, title: 'Offerings'}),

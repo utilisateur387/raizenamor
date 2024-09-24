@@ -34,10 +34,10 @@ export default async function WorkWithMe() {
         }}
       />
 
-      <main id='offerings' className='section min-h-[90vh] mt-[6em]'>
+      <main id='offerings' className='min-h-[90vh] mt-[6em]'>
 
         {/* OFFERINGS */}
-        <section>
+        <section className='section-padding'>
           {offerings.map(offering => (
             <div key={offering._key} className='offering mb-6 block md:flex space-x-0 md:space-x-4'>
               <div className='w-full md:w-6/12 mb-8 md:mb-0 flex flex-col justify-between'>
@@ -75,9 +75,11 @@ export default async function WorkWithMe() {
         />
 
         {/* FAQ */}
-        <section>
-          <hr className='my-6' />
-          <FaqAccordion faq={faq} />
+        <section className='faq'>
+          <div className="section-padding">
+            {/* <hr className='my-6' /> */}
+            <FaqAccordion faq={faq} />
+          </div>
         </section>
       </main>
     </>

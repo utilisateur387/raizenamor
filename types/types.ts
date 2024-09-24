@@ -1,35 +1,35 @@
 import { PortableTextBlock } from "sanity";
 
 export type Homepage = {
-  _id: string;
-  _createdAt: Date;
-  headline: string;
-  introParagraph: string;
-  headshot: { url: string, alt: string };
-  quote: string;
-  workWithMe: string;
-  testimonials: Testimonial[];
-  backgroundImage1: Image;
-  backgroundImage2: Image;
+  _id: string,
+  _createdAt: Date,
+  headline: string,
+  introParagraph: string,
+  headshot: { url: string, alt: string },
+  quote: string,
+  workWithMe: string,
+  testimonials: Testimonial[],
+  backgroundImage1: Image,
+  backgroundImage2: Image,
 }
 
 export type Testimonial = {
-  _key: string;
-  author: string;
-  text: string;
+  _key: string,
+  author: string,
+  text: string,
 }
 
 export type WorkWithMePage = {
-  _id: string;
-  offerings: Offering[];
-  faq: FaqEntry[];
-  backgroundImage1: Image;
-  backgroundImage2: Image;
+  _id: string,
+  offerings: Offering[],
+  faq: FaqEntry[],
+  backgroundImage1: Image,
+  backgroundImage2: Image,
 }
 
 export type Image = {
   url: string, 
-  alt: string
+  alt: string,
 }
 
 export type Offering = {
@@ -47,8 +47,13 @@ export type FaqEntry = {
 }
 
 export type AboutPage = {
-  _id: string;
+  _id: string,
   headline: string,
   content: PortableTextBlock,
   portrait: Image;
+}
+
+export type General = {
+  _id: string,
+  instagram: string,
 }

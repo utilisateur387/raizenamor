@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 
 export default async function Home() {
-  const content = await getHomepage()
+  const content = await getHomepage();  
   const {
     headline, 
     introParagraph, 
@@ -19,7 +19,6 @@ export default async function Home() {
     <main className="min-h-[90vh]">
 
       {/* BANNER */}
-
       <div className="hp-banner-outside outside" style={{ height: '80vh' }}>
         <div className="hp-banner-inside inside">
           <section className="home-banner flex flex-col md:flex-row md:space-x-6 w-full">

@@ -5,6 +5,7 @@
 @import '@styles/variables.scss';
 @import '@styles/beziers.scss';
 @import '@styles/homepage.scss';
+@import '@styles/work-with-me.scss';
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -32,11 +33,15 @@ nav, footer, .section {
   padding-left: 2em;
   padding-right: 2em;
 }
+section > div {
+  max-width: 1400px;
+  margin: 0 auto;
+}
 nav {
   font-size: 1.1em;
   letter-spacing: 0.5px;
   line-height: 1em;
-  position: relative;
+  position: fixed;
   width: 100vw;
   height: 90px;
   background: $red;
@@ -66,7 +71,7 @@ hr {
   border-top: solid 1px $red;
 }
 .section-padding {
-  padding: 6em 6em;
+  padding: 6em 2em;
 
   @media screen and (max-width: 768px) {
     padding: 6em 2em;
@@ -109,6 +114,8 @@ hr {
 .question {
   font-family: $gt;
   font-size: 2em;
+  max-width: 85%;
+  line-height: 1.2em;
 }
 .icon-plus {
   font-size: 1.4em;
