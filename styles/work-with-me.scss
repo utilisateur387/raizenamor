@@ -1,6 +1,30 @@
 section.faq {
-  background-color: $beige;
+  position: relative;
+  
+  &::before {
+    content: "";
+    background-color: $beige;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+    border-radius: 30% 50% 0% 0%; /* Asymmetrical organic feel */
+    transform: rotate(-3deg) scaleX(150%) scaleY(110%);/* A slight rotation for an organic appearance */
+    transition: all ease 1s;
+  }
 }
+
 .faq-answer {
   max-width: 800px;
+}
+
+.wwm-bg-1 {
+  width: auto;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  z-index: -100;
+  opacity: 0.8;
 }

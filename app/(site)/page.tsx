@@ -23,26 +23,38 @@ export default async function Home() {
         <div className="hp-banner-inside inside">
           <section className="home-banner flex flex-col md:flex-row md:space-x-6 w-full">
 
-            <div className="w-full md:w-5/12" style={{ 
+            {/* HEADSHOT DESKTOP */}
+            <div className="sm:w-0 lg:w-1/12"></div>
+            <div className="w-full md:w-6/12 lg:w-5/12 flex items-center justify-center" >
+                {/* <div style={{ 
               backgroundImage: `url(${headshot?.url}`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
-              }}></div>
+              }}></div> */}
+              <Image
+                src={headshot?.url || ''} 
+                alt={headshot?.url || ''} 
+                width={0}
+                height={0}
+                className='headshot-desktop w-full'
+                sizes='60vw'
+              />
+            </div>
 
-            <div className="home-banner-intro w-full block md:w-7/12 md:flex items-center justify-center flex-col section-padding">
+            <div className="home-banner-intro w-full block md:w-6/12 lg:w-5/12 md:flex items-center justify-center flex-col section-padding">
               <div className='flex gap-5 flex-col items-start items-center md:items-start'>
 
                 {/* HEADSHOT MOBILE */}
-                <div className='container-headshot rounded-full mx-auto flex items-center mt-16 mb-8 md:hidden'>
+                {/* <div className='container-headshot rounded-full mx-auto flex items-center mt-16 mb-8 md:hidden'>
                   <Image 
                     src={headshot?.url || ''} 
                     alt={headshot?.url || ''} 
                     width={0}
                     height={0}
                     className='w-full'
-                    sizes='100vw'
+                    sizes='60vw'
                   />
-                </div>
+                </div> */}
 
                 {/* BANNER TEXT */}
                 <h1 className='uppercase text-center md:text-left'>{headline}</h1>
@@ -50,6 +62,7 @@ export default async function Home() {
                 <Link href='/about' className='btn text-center md:text-left'>Learn more</Link>
               </div>
             </div>
+            <div className="sm:w-0 lg:w-1/12"></div>
           </section>
         </div>
       </div>

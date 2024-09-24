@@ -25,13 +25,8 @@ export default async function WorkWithMe() {
         alt={backgroundImage1?.alt} 
         width={0}
         height={0}
-        className='w-full'
+        className='w-full wwm-bg-1'
         sizes='100vw'
-        style={{ 
-          position: 'absolute',
-          top: 40,
-          zIndex: -100
-        }}
       />
 
       <main id='offerings' className='min-h-[90vh] mt-[6em]'>
@@ -65,14 +60,14 @@ export default async function WorkWithMe() {
 
 
         {/* BACKGROUND IMAGE */}
-        <Image 
+        {/* <Image 
           src={backgroundImage2?.url} 
           alt={backgroundImage2?.alt} 
           width={0}
           height={0}
           className='w-full'
           sizes='100vw'
-        />
+        /> */}
 
         {/* FAQ */}
         <section className='faq'>
