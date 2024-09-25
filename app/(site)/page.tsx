@@ -95,13 +95,15 @@ export default async function Home() {
 
 
       {/* TESTIMONIALS */}
-      <div className="section-padding section testimonials flex justify-start overflow-x-scroll space-x-12">
-        {testimonials.map(testimonial => (
-          <div className='testimonial-card text-center inline-block' key={testimonial._key}>
-            <p>{testimonial.text}</p>
-            <p className='mt-2'>{testimonial.author}</p>
-          </div>
-        ))}
+      <div className='section-padding section testimonials'>
+        <div className="flex justify-start overflow-x-scroll space-x-12">
+          {testimonials.map(testimonial => (
+            <div className='testimonial-card text-center inline-block' key={testimonial._key}>
+              <p>{testimonial.text}</p>
+              <p className='mt-2'>{testimonial.author}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* BACKGROUND IMAGE */}

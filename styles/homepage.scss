@@ -29,6 +29,9 @@
 .container-bg2 {
   max-height: 300px;
   overflow: hidden;
+  transform: scale(1.5);
+  z-index: -100;
+  position: relative;
 }
 
 .headshot-desktop {
@@ -82,8 +85,28 @@
   }
 }
 
-.testimonials::-webkit-scrollbar {
-  display: none;
+.testimonials {
+  position: relative;
+  overflow: hidden;
+  // z-index: 1;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    background-color: $off-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0% 0% 30% 15%; /* Asymmetrical organic feel */
+    transform: rotate(2deg) scaleX(150%) scaleY(110%) translateY(-40px);/* A slight rotation for an organic appearance */
+    transition: all ease 1s;
+  }
 }
 
 .testimonial-card {

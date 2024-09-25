@@ -16,7 +16,7 @@ export default function FaqAccordion({
   faq
 }: Props) {
 
-  const [accordion, setAccordion] = useState<AccordionState>(
+  const [accordion, setAccordion] = useState(
     faq.reduce((acc, _, index) => {
       acc[index] = 'none';
       return acc;
