@@ -9,6 +9,9 @@
 }
 section.certifications {
   z-index: 1;
+  padding-bottom: 9em !important;
+  margin-bottom: -6em !important;
+
   &::before {
     content: "";
     background-color: $beige;

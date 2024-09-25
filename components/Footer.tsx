@@ -8,7 +8,7 @@ export default async function Footer() {
   const { instagram } = content;
 
   return (
-    <footer className='py-12'>
+    <footer className='py-12 relative'>
       <div className='block md:flex space-y-10 md:space-y-0'>
         <div className="md:w-6/12">
           <h2 className='mb-8'>Find me here</h2>

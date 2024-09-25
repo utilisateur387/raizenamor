@@ -32,29 +32,9 @@ export default function ContactForm() {
   //   })
   // }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>, input: string) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, input: string) => {
     const value = e.currentTarget.value
     setFormData({...formData, [input]: value})
-
-  //   switch (input) {
-  //     case 'firstName':
-  //       setFirstName(value)
-  //       break
-  //     case 'lastName':
-  //       setLastName(value)
-  //       break
-  //     case 'email':
-  //       setEmail(value)
-  //       break
-  //     case 'message':
-  //       setMessage(value)
-  //       break
-  //     case 'phone':
-  //       setPhone(value)
-  //       break
-  //     default :
-  //       break
-  //   }
   }
 
   return (

@@ -27,9 +27,26 @@ body {
   // font-family: var(--font-ibm);
 }
 footer {
-  background-color: $red;
+  // background-color: $red;
   color: $off-white;
   z-index: 20;
+  padding-top: 9em !important;
+  margin-top: -4em;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    background-color: $red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 20% 40% 0% 0%; /* Asymmetrical organic feel */
+    transform: rotate(-3deg) scaleX(150%) scaleY(110%) translateY(62px);/* A slight rotation for an organic appearance */
+    transition: all ease 1s;
+  }
 }
 nav, footer, .section {
   padding-left: 2em;
