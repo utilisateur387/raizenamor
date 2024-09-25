@@ -19,18 +19,18 @@ export default function ContactForm() {
   // const [message, setMessage] = useState('')
   // const [phone, setPhone] = useState('')
 
-  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(e)
-    e.preventDefault();
+  // const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  //   console.log(e)
+  //   e.preventDefault();
 
-    const res = await fetch('/api/mailchimp', {
-      body: JSON.stringify(formData),
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-  }
+  //   const res = await fetch('/api/mailchimp', {
+  //     body: JSON.stringify(formData),
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //   })
+  // }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, input: string) => {
     const value = e.currentTarget.value
