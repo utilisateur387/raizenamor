@@ -61,7 +61,7 @@ export default function ContactForm() {
     <form 
       action="" 
       className='contact-form flex flex-col space-y-3'
-      onSubmit={handleSubmit}
+      // onSubmit={handleSubmit}
       >
       <div className="block space-y-3 md:space-y-0 md:flex md:space-x-3">
         <div className="md:w-6/12">
