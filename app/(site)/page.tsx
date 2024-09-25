@@ -26,11 +26,6 @@ export default async function Home() {
             {/* HEADSHOT DESKTOP */}
             <div className="sm:w-0 lg:w-1/12"></div>
             <div className="w-full md:w-6/12 lg:w-5/12 flex items-center justify-center" >
-                {/* <div style={{ 
-              backgroundImage: `url(${headshot?.url}`,
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-              }}></div> */}
               <Image
                 src={headshot?.url || ''} 
                 alt={headshot?.url || ''} 
@@ -38,23 +33,12 @@ export default async function Home() {
                 height={0}
                 className='headshot-desktop w-full'
                 sizes='60vw'
+                priority
               />
             </div>
 
             <div className="home-banner-intro w-full block md:w-6/12 lg:w-5/12 md:flex items-center justify-center flex-col section-padding">
               <div className='flex gap-5 flex-col items-start items-center md:items-start'>
-
-                {/* HEADSHOT MOBILE */}
-                {/* <div className='container-headshot rounded-full mx-auto flex items-center mt-16 mb-8 md:hidden'>
-                  <Image 
-                    src={headshot?.url || ''} 
-                    alt={headshot?.url || ''} 
-                    width={0}
-                    height={0}
-                    className='w-full'
-                    sizes='60vw'
-                  />
-                </div> */}
 
                 {/* BANNER TEXT */}
                 <h1 className='uppercase text-center md:text-left'>{headline}</h1>

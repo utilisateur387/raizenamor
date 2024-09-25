@@ -41,7 +41,7 @@ export default async function About() {
           <div className="w-full md:w-5/12">
             <ul className='certification-list'>
               {certifications.map(certification => {
-                return <li>{certification.title}</li>
+                return <li key={certification.title}>{certification.title}</li>
               })}
             </ul>
           </div>
