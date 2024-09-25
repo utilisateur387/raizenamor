@@ -19,7 +19,7 @@ export default function ContactForm() {
   // const [message, setMessage] = useState('')
   // const [phone, setPhone] = useState('')
 
-  const handleSubmit = async (e: event) => {
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     console.log(e)
     e.preventDefault();
 
@@ -32,8 +32,8 @@ export default function ContactForm() {
     })
   }
 
-  const handleChange = (e: event, input: string) => {
-    const value = e.target.value
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>, input: string) => {
+    const value = e.currentTarget.value
     setFormData({...formData, [input]: value})
 
   //   switch (input) {
