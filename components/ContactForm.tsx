@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
 
 // export type event = keyof GlobalEventHandlersEventMap;
 
@@ -13,24 +14,37 @@ export default function ContactForm() {
     message: '',
     phone: '',
   })
-  // const [firstName, setFirstName] = useState('')
-  // const [lastName, setLastName] = useState('')
-  // const [email, setEmail] = useState('')
-  // const [message, setMessage] = useState('')
-  // const [phone, setPhone] = useState('')
+  const [result, setResult] = useState('')
+  const form = useRef();
+  const resMessage = useRef();
 
-  // const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
-  //   console.log(e)
-  //   e.preventDefault();
+  const handleSubmit = async (e: React.SyntheticEvent) => {
+    e.preventDefault();   
 
-  //   const res = await fetch('/api/mailchimp', {
-  //     body: JSON.stringify(formData),
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   })
-  // }
+    emailjs
+    .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID
+      , process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
+      publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          message: '',
+          phone: '',
+        })
+        setResult('Your message has been sent!')
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+        console.log(error);
+        setResult('There was an error, please email raizenamor44 (at) gmail.com')
+      },
+    );
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, input: string) => {
     const value = e.currentTarget.value
@@ -41,13 +55,14 @@ export default function ContactForm() {
     <form 
       action="" 
       className='contact-form flex flex-col space-y-3'
-      // onSubmit={handleSubmit}
+      onSubmit={handleSubmit}
+      ref={form}
       >
       <div className="block space-y-3 md:space-y-0 md:flex md:space-x-3">
         <div className="md:w-6/12">
           <input 
             type="text"
-            name='first-name'
+            name='firstname'
             placeholder='First name'
             className='w-full py-2'
             value={formData.firstName}
@@ -58,7 +73,7 @@ export default function ContactForm() {
         <div className="md:w-6/12">
           <input 
             type="text"
-            name='last-name'
+            name='lastname'
             placeholder='Last name'
             className='w-full py-2'
             value={formData.lastName}
@@ -102,6 +117,7 @@ export default function ContactForm() {
         type="submit" 
         value="Send" 
         className='btn'/>
+      <div ref={resMessage}>{result}</div>
     </form>
   )
 }

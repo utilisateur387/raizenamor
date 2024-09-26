@@ -15,7 +15,6 @@ export default async function WorkWithMe() {
     backgroundImage1,
     backgroundImage2,
   } = content
-  console.log(content);
 
   return (
     <>
@@ -29,7 +28,7 @@ export default async function WorkWithMe() {
         sizes='100vw'
       />
 
-      <main id='offerings' className='min-h-[90vh] mt-[6em]'>
+      <main id='offerings' className='min-h-[90vh] mt-[6em] overflow-x-hidden'>
 
         {/* OFFERINGS */}
         <section className='section-padding'>

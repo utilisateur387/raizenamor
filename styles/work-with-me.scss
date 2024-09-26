@@ -1,12 +1,13 @@
 section.faq {
   position: relative;
   z-index: 10;
+  overflow-y: hidden;
   
   &::before {
     content: "";
     background-color: $beige;
     position: absolute;
-    top: 0;
+    top: 35px;
     left: 0;
     right: 0;
     bottom: 0;
