@@ -15,35 +15,36 @@ export default function ContactForm() {
     phone: '',
   })
   const [result, setResult] = useState('')
-  const form = useRef();
-  const resMessage = useRef();
+  const form = useRef<HTMLFormElement | null>(null);
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();   
 
-    emailjs
-    .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID
-      , process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
-      publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-    })
-    .then(
-      () => {
-        console.log('SUCCESS!');
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          message: '',
-          phone: '',
-        })
-        setResult('Your message has been sent!')
-      },
-      (error) => {
-        console.log('FAILED...', error.text);
-        console.log(error);
-        setResult('There was an error, please email raizenamor44 (at) gmail.com')
-      },
-    );
+    if (form.current) {
+      emailjs
+      .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID
+        , process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
+        publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            message: '',
+            phone: '',
+          })
+          setResult('Your message has been sent!')
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          console.log(error);
+          setResult('There was an error, please email raizenamor44 (at) gmail.com')
+        },
+      );
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, input: string) => {
@@ -117,7 +118,7 @@ export default function ContactForm() {
         type="submit" 
         value="Send" 
         className='btn'/>
-      <div ref={resMessage}>{result}</div>
+      <div>{result}</div>
     </form>
   )
 }
