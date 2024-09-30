@@ -58,6 +58,7 @@ export type AboutPage = {
 export type General = {
   _id: string,
   instagram: string,
+  copyright: string,
 }
 
 export type Certification = {

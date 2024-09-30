@@ -34,6 +34,15 @@ footer {
   margin-top: -4em;
   overflow: hidden;
 
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .copyright {
+   font-size: 0.75em;
+  }
+
   &::before {
     content: "";
     background-color: $red;

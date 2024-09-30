@@ -16,14 +16,14 @@ export default async function Home() {
   } = content;
 
   return (
-    <main className="min-h-[90vh]">
+    <main className="min-h-[90vh] overflow-x-hidden">
 
       {/* BANNER */}
-      <div className="hp-banner-outside outside" style={{ height: '80vh' }}>
+      <div className="hp-banner-outside outside" style={{ }}>
         <div className="hp-banner-inside inside">
           <section className="home-banner flex flex-col md:flex-row md:space-x-6 w-full">
 
-            {/* HEADSHOT DESKTOP */}
+            {/* HEADSHOT */}
             <div className="sm:w-0 lg:w-1/12"></div>
             <div className="w-full md:w-6/12 lg:w-5/12 flex items-center justify-center" >
               <Image

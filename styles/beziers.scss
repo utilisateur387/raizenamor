@@ -51,6 +51,11 @@
 
 .hp-banner-outside {
   top: 0px;
+  height: 80vh;
+
+  @media screen and (max-width: 768px) {
+    height: 100vh;
+  }
 }
 
 .top-bottom-outside, .top-bottom-inside {

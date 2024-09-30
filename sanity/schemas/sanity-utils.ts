@@ -75,7 +75,8 @@ export async function getGeneral(): Promise<General> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "general"][0]{
       _id,
-      instagram
+      instagram,
+      copyright,
     }`
   )
 }
