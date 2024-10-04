@@ -1,5 +1,6 @@
 import { getAboutPage } from '@/sanity/schemas/sanity-utils'
 import { PortableText } from '@portabletext/react'
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
@@ -14,19 +15,29 @@ export default async function About() {
   } = contentAbout;
   
   return (
-    <main className='section min-h-[90vh]'>
-      <section className="block md:flex">
-        <div className="md:w-6/12 section-padding flex flex-col items-start gap-5 !py-40">
+    <main id="about" className='section min-h-[90vh] overflow-hidden'>
+      <section className="about-banner block md:flex">
+        <div className="section-padding flex flex-col items-start justify-center gap-5 md:!py-40">
           <h1 className='uppercase'>{headline}</h1>
           <PortableText value={content} />
           <Link href={'/work-with-me'} className='btn'>Discover my offerings</Link>
         </div>
-        <div className="md:w-6/12"
-          style={{
-            backgroundImage: `url(${portrait.url})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}>
+        <div className="about-banner-image flex items-start justify-center"
+          // style={{
+          //   backgroundImage: `url(${portrait.url})`,
+          //   backgroundSize: 'cover',
+          //   backgroundPosition: 'center',
+          // }}
+          >
+            <Image
+              src={portrait.url}
+              width={0}
+              height={0}
+              alt={portrait.alt}
+              className='w-full'
+              sizes='50vw'
+              priority
+            />
         </div>
       </section>
 

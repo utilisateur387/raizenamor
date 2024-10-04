@@ -1,7 +1,16 @@
+main#offerings {
+  margin-bottom: -6em;
+}
+
 section.faq {
   position: relative;
   z-index: 10;
   overflow-y: hidden;
+
+  & > div {
+    padding-top: 8em !important;
+    padding-bottom: 8em !important;
+  }
   
   &::before {
     content: "";
@@ -16,6 +25,12 @@ section.faq {
     transform: rotate(-3deg) scaleX(150%) scaleY(110%);/* A slight rotation for an organic appearance */
     transition: all ease 1s;
   }
+
+  .question {
+    @media screen and (max-width: 768px) {
+      font-size: 1.75em;
+    }
+  }
 }
 
 .faq-answer {
@@ -29,4 +44,42 @@ section.faq {
   position: fixed;
   z-index: -100;
   opacity: 0.8;
+}
+
+.offerings {
+  overflow: hidden;
+}
+
+.offering {
+  background-color: $beige;
+  padding: 3em;
+  border-radius: 50px;
+  
+  @media screen and (max-width: 1440px) {
+    max-width: 95%;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 2em;
+  }
+}
+
+.offerings-title {
+  font-size: 2.5em;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 2em;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.offering-duration {
+  font-size: 1.1em;
+  font-style: italic;
+  text-transform: lowercase;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }

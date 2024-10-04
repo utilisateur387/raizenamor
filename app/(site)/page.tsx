@@ -16,7 +16,7 @@ export default async function Home() {
   } = content;
 
   return (
-    <main className="min-h-[90vh] overflow-x-hidden">
+    <main id="home" className="min-h-[90vh] overflow-hidden">
 
       {/* BANNER */}
       <div className="hp-banner-outside outside" style={{ }}>
@@ -107,7 +107,7 @@ export default async function Home() {
       </div>
 
       {/* BACKGROUND IMAGE */}
-      <div className='container-bg2'>
+      <div className='container-bg2 flex items-center'>
         <Image 
           src={backgroundImage2.url || ''} 
           alt={backgroundImage2.alt || ''} 

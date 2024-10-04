@@ -28,16 +28,16 @@ export default async function WorkWithMe() {
         sizes='100vw'
       />
 
-      <main id='offerings' className='min-h-[90vh] mt-[6em] overflow-x-hidden'>
+      <main id='offerings' className='min-h-[90vh] mt-[6em] overflow-hidden'>
 
         {/* OFFERINGS */}
-        <section className='section-padding'>
+        <section className=''>
           {offerings.map(offering => (
             <div key={offering._key} className='offering mb-6 block md:flex space-x-0 md:space-x-4'>
               <div className='w-full md:w-6/12 mb-8 md:mb-0 flex flex-col justify-between'>
                 <div>
                   <h2 className='offerings-title uppercase max-w-md mb-2'>{offering.title}</h2>
-                  <h3 className='offering-duration mb-4'>{offering.duration}</h3>
+                  <h3 className='offering-duration md:mb-4'>{offering.duration}</h3>
                 </div>
                 
                 {/* Book button desktop */}

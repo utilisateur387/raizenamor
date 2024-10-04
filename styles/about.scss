@@ -1,3 +1,35 @@
+main#about {
+  margin-bottom: -6em;
+}
+
+.about-banner {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.about-banner-image {
+  height: 100vh;
+  align-items: center;
+  min-width: 45%;
+  position: sticky;
+  top: 0;
+
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+    height: fit-content;
+    margin-bottom: 5em;
+    min-width: unset;
+  }
+
+  img {
+    max-width: 80%;
+    max-height: 70%;
+    object-fit: contain;
+    // position: sticky;
+    // top: 200px;
+  }
+}
+
 .certification-list {
   li {
     list-style-type: initial;
@@ -9,8 +41,8 @@
 }
 section.certifications {
   z-index: 1;
-  padding-bottom: 9em !important;
-  margin-bottom: -6em !important;
+  padding-bottom: 8em !important;
+  // margin-bottom: -6em !important;
 
   &::before {
     content: "";

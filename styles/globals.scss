@@ -31,7 +31,7 @@ footer {
   color: $off-white;
   z-index: 20;
   padding-top: 9em !important;
-  margin-top: -4em;
+  // margin-top: -7em;
   overflow: hidden;
 
   h3 {
@@ -57,7 +57,7 @@ footer {
     transition: all ease 1s;
   }
 }
-nav, footer, .section {
+nav, footer {
   padding-left: 2em;
   padding-right: 2em;
 }
@@ -85,10 +85,10 @@ h1 {
   line-height: 1.1em;
   font-family: $gt;
 
-  @media screen and (max-width: 768px) {
-    font-size: 2.5em;
-    line-height: 1.2em;
-  }
+  // @media screen and (max-width: 768px) {
+  //   font-size: 2.5em;
+  //   line-height: 1.2em;
+  // }
 }
 h2 {
   font-size: 1.7em;
@@ -96,6 +96,10 @@ h2 {
   font-family: $gt;
   line-height: 1em;
   text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1em;
+  }
 }
 hr {
   border-top: solid 1px $red;
@@ -104,7 +108,7 @@ hr {
   padding: 6em 2em;
 
   @media screen and (max-width: 768px) {
-    padding: 6em 2em;
+    // padding: 6em 0;
   }
 }
 .btn {
@@ -123,22 +127,6 @@ hr {
  line-height: 1.2em;
  font-style: italic;
  margin: 0 auto;
-}
-.offerings {
-  overflow: hidden;
-}
-.offering {
-  background-color: $beige;
-  padding: 3em;
-  border-radius: 50px;
-}
-.offerings-title {
-  font-size: 2.5em;
-}
-.offering-duration {
-  font-size: 1.1em;
-  font-style: italic;
-  text-transform: lowercase;
 }
 .gt {
   font-family: $gt;
