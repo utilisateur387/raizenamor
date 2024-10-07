@@ -24,7 +24,7 @@ export default async function WorkWithMe() {
         alt={backgroundImage1?.alt} 
         width={0}
         height={0}
-        className='w-full wwm-bg-1'
+        className='wwm-bg-image w-full wwm-bg-1'
         sizes='100vw'
       />
 

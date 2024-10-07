@@ -82,13 +82,15 @@ nav.desktop {
 }
 
 nav.mobile {
-
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 button.menu, button.close {
   position: absolute;
-  top: 1.2em;
-  right: 2em;
+  top: 1em;
+  right: 1em;
 
 }
 
@@ -96,6 +98,7 @@ button.menu, button.close {
   border: solid 1px $red;
   border-radius: 30%;
   padding: 1em;
+  background-color: $off-white;
 }
 
 .close {
@@ -107,12 +110,13 @@ button.menu, button.close {
 .menu-panel {
   background-color: $red;
   color: $off-white;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  // top: 0;
   left: 0;
   width: 100vw;
-  height: fit-content;
+  height: 40vh;
   padding: 2em;
+  transition: top ease 300ms;
 
   ul {
     margin-top: 3em;
