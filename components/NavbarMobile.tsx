@@ -3,15 +3,22 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-
+import { useWindowSize } from "@uidotdev/usehooks";
 
 export default function NavbarMobile() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
-  const pathname = usePathname()
+  const pathname = usePathname();
+  const size = useWindowSize();
 
   useEffect(() => {
     setIsMenuVisible(false);
   }, [pathname])
+
+  useEffect(() => {
+    if (size.width && size.width > 768) {
+      setIsMenuVisible(false);
+    }
+  }, [size])
 
   function handleMenuBtnClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
     setIsMenuVisible(true);
@@ -21,7 +28,7 @@ export default function NavbarMobile() {
     setIsMenuVisible(false);
   }
 
-  const handleLinkClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     setIsMenuVisible(false);
   }
 
