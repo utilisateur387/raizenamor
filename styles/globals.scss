@@ -71,14 +71,14 @@ nav {
   line-height: 1em;
   position: fixed;
   width: 100vw;
-  height: 90px;
-  -webkit-clip-path: url(#navCurve);
-  clip-path: url(#navCurve);
   z-index: 1000;
 }
 
 nav.desktop {
   background: $red;
+  height: 90px;
+  -webkit-clip-path: url(#navCurve);
+  clip-path: url(#navCurve);
 }
 
 nav.mobile {
@@ -151,6 +151,12 @@ h2 {
 
   @media screen and (max-width: 768px) {
     font-size: 1em;
+  }
+}
+
+p {
+  @media screen and (max-width: 768px) {
+    font-size: 0.8em;
   }
 }
 
