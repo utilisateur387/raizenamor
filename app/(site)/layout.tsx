@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import '@styles/globals.scss'
-import Navbar from '@/components/Navbar'
 import { IBM_Plex_Mono  } from 'next/font/google'
 import Footer from '@/components/Footer'
 import localFont from '@next/font/local'
+import NavbarDesktop from '@/components/NavbarDesktop'
+import NavbarMobile from '@/components/NavbarMobile'
 
 const ibm = IBM_Plex_Mono({
   subsets: ['latin'],
@@ -28,8 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en" id='root'>
       <body className={`${ibm.className} ${gtSuper.variable}`}>
-        <Navbar />
-          {children}
+        <NavbarDesktop />
+        <NavbarMobile />
+        {children}
         <Footer />
       </body>
     </html>

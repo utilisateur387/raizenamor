@@ -72,24 +72,72 @@ nav {
   position: fixed;
   width: 100vw;
   height: 90px;
-  background: $red;
   -webkit-clip-path: url(#navCurve);
   clip-path: url(#navCurve);
   z-index: 1000;
 }
+
+nav.desktop {
+  background: $red;
+}
+
+nav.mobile {
+
+}
+
+button.menu, button.close {
+  position: absolute;
+  top: 1.2em;
+  right: 2em;
+
+}
+
+.menu {
+  border: solid 1px $red;
+  border-radius: 30%;
+  padding: 1em;
+}
+
+.close {
+  border: solid 1px $off-white;
+  border-radius: 30%;
+  padding: 1em;
+}
+
+.menu-panel {
+  background-color: $red;
+  color: $off-white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: fit-content;
+  padding: 2em;
+
+  ul {
+    margin-top: 3em;
+  }
+  li {
+    font-size: 1.7em;
+    padding-bottom: 1em;
+  }
+}
+
 .border {
   border: solid 1px $red;
 }
+
 h1 {
   font-size: 3em;
   line-height: 1.1em;
   font-family: $gt;
 
-  // @media screen and (max-width: 768px) {
-  //   font-size: 2.5em;
-  //   line-height: 1.2em;
-  // }
+  @media screen and (max-width: 768px) {
+    font-size: 2.25em;
+    line-height: 1.2em;
+  }
 }
+
 h2 {
   font-size: 1.7em;
   letter-spacing: 1px;
@@ -101,9 +149,11 @@ h2 {
     font-size: 1em;
   }
 }
+
 hr {
   border-top: solid 1px $red;
 }
+
 .section-padding {
   padding: 6em 2em;
 
@@ -111,6 +161,7 @@ hr {
     // padding: 6em 0;
   }
 }
+
 .btn {
   background-color: $red;
   color: $off-white;
@@ -120,6 +171,7 @@ hr {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 .quote {
  font-size: 2em;
  font-family: $gt;
@@ -127,10 +179,16 @@ hr {
  line-height: 1.2em;
  font-style: italic;
  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5em;
+  }
 }
+
 .gt {
   font-family: $gt;
 }
+
 .question {
   font-family: $gt;
   font-size: 2em;
