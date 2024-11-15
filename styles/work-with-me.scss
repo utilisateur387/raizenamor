@@ -26,8 +26,14 @@ section.faq {
     bottom: 0;
     z-index: -1;
     border-radius: 30% 50% 0% 0%; /* Asymmetrical organic feel */
-    transform: rotate(-3deg) scaleX(150%) scaleY(110%);/* A slight rotation for an organic appearance */
+    transform: rotate(-3deg) scale(1.5, 1.1);/* A slight rotation for an organic appearance */
     transition: all ease 1s;
+
+    @media screen and (max-width: 768px) {
+      border-radius: 10% 25% 0% 0%; /* Asymmetrical organic feel */
+      top: 50px;
+      transform: rotate(-3deg) scaleX(1.3) scaleY(1.1);
+    }
   }
 
   .question {

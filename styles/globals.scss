@@ -52,14 +52,22 @@ footer {
     right: 0;
     bottom: 0;
     z-index: -1;
-    border-radius: 20% 40% 0% 0%; /* Asymmetrical organic feel */
-    transform: rotate(-3deg) scaleX(150%) scaleY(110%) translateY(62px);/* A slight rotation for an organic appearance */
+    border-radius: 20% 30% 0% 0%; /* Asymmetrical organic feel */
+    transform: rotate(-3deg) scale(1.5, 1.1) translateY(62px);/* A slight rotation for an organic appearance */
     transition: all ease 1s;
+
+    @media screen and (max-width: 768px) {
+      border-radius: 25% 10% 0% 0%; /* Asymmetrical organic feel */
+    }
   }
 }
-nav, footer {
+footer {
   padding-left: 2em;
   padding-right: 2em;
+}
+section {
+  margin: 0 auto;
+  width: 100%;
 }
 section > div {
   max-width: 1400px;
@@ -72,6 +80,10 @@ nav {
   position: fixed;
   width: 100vw;
   z-index: 1000;
+}
+.nav-content {
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 nav.desktop {

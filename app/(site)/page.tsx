@@ -60,18 +60,69 @@ export default async function Home() {
       {/* WORK WITH ME */}
       <div className="top-bottom-outside outside" style={{ height: '80vh' }}>
         <div className="top-bottom-inside inside">
-          <section className="flex section" style={{height: '-webkit-fill-available'}}>
+          <section className="flex section px-8" style={{height: '-webkit-fill-available'}}>
 
-            <div className="outside right-outside wwm z-20">
-              <div className="right-inside w-7/12 flex flex-col items-start justify-center gap-5 section-padding !pr-16 md:pr-0">
+            <div className='w-full md:w-6/12 flex items-center justify-center flex-col'>
+              <div>
                 <h2 className='uppercase'>Work with me</h2>
                 <p>{workWithMe}</p>
                 <Link href='/work-with-me' className='btn'>Discover my offerings</Link>
               </div>
             </div>
 
+            <div className="w-full md:w-6/12 flex items-center justify-center">
+              <Image 
+                src={backgroundImage1.url || ''} 
+                alt={backgroundImage1.alt || ''} 
+                width={0}
+                height={0}
+                className='w-full'
+                sizes='100vw'
+                style={{
+                  maxWidth: "90%",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  transform: "translateX(70px)",
+                  borderRadius: "42% 0% 0% 0%",
+                }}
+              />
+            </div>
+
+            {/* <div className="w-full md:w-6/12 flex items-center justify-center">
+              <Image 
+                src={backgroundImage1.url || ''} 
+                alt={backgroundImage1.alt || ''} 
+                width={0}
+                height={0}
+                className='w-full curvy-container'
+                sizes='100vw'
+                style={{
+                  maxWidth: "90%",
+                  height: 500,
+                  objectFit: "cover",
+                }}
+              />
+            </div> */}
+            
+            {/* <div className="w-full md:w-6/12" style={{ 
+              backgroundImage: `url(${backgroundImage1.url}`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              height: '100%',
+              }}>
+            </div> */}
+
+            {/* <div className="right-outside wwm z-20">
+              <div className="right-inside w-7/12 flex flex-col items-start justify-center gap-5 section-padding !pr-16 md:pr-0">
+                <h2 className='uppercase'>Work with me</h2>
+                <p>{workWithMe}</p>
+                <Link href='/work-with-me' className='btn'>Discover my offerings</Link>
+              </div>
+            </div> */}
+
             {/* BACKGROUND IMAGE */}
-            <div className="w-2/12 md:w-6/12 hp-bg2" style={{ 
+            {/* <div className="w-2/12 md:w-6/12 hp-bg2" style={{ 
               backgroundImage: `url(${backgroundImage1.url}`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
@@ -81,14 +132,8 @@ export default async function Home() {
               top: -30,
               right: 0,
               }}>
-                {/* <Image 
-                  src={backgroundImage1.url} 
-                  width={0} 
-                  height={0}
-                  alt={backgroundImage1.alt} 
-                  style={{width: 600, height: 200}}
-                  sizes='(max-width: 768px) 100vw, 100vw' /> */}
-            </div>
+            </div> */}
+            
           </section>
         </div>
       </div>

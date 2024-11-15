@@ -6,7 +6,7 @@ export default function NavbarDesktop() {
     <div className='hidden md:block'>
       <nav className='desktop'>
         <div className="navInside">
-          <div className='flex justify-between py-4 gt uppercase'>
+          <div className='nav-content flex justify-between py-4 gt uppercase'>
             <Link href='/' className='gt uppercase'>Raiz<br/>en amor</Link>
             <div className='flex items-center'>
               <Link href='/work-with-me'>Work with me</Link>

@@ -55,7 +55,7 @@ section.certifications {
     bottom: 0;
     z-index: -1;
     border-radius: 40% 20% 0% 0%; /* Asymmetrical organic feel */
-    transform: rotate(3deg) scaleX(150%) scaleY(110%);/* A slight rotation for an organic appearance */
+    transform: rotate(3deg) scaleX(1.5) scaleY(1.1);/* A slight rotation for an organic appearance */
     transition: all ease 1s;
   }
 }

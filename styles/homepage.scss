@@ -80,8 +80,9 @@ main#home {
   background-size: cover;
   position: absolute;
   height: 100%;
-  left: 50%;
-  top: -30;
+  left: 60% !important;
+  top: -30px;
+  transform: rotate(-3deg) scale(1.5, 1.1) translateY(62px);
   
   @media screen and (max-width: 768px) {
     right: 0;
@@ -107,8 +108,8 @@ main#home {
     right: 0;
     bottom: 0;
     z-index: -1;
-    border-radius: 0% 0% 30% 15%; /* Asymmetrical organic feel */
-    transform: rotate(2deg) scaleX(150%) scaleY(110%) translateY(-40px);/* A slight rotation for an organic appearance */
+    border-radius: 0% 0% 0% 35%; /* Asymmetrical organic feel */
+    transform: rotate(2deg) scale(1.5, 1.1) translateY(-40px);
     transition: all ease 1s;
   }
 }
