@@ -20,7 +20,7 @@ export default async function About() {
         <div className="section-padding flex flex-col items-start justify-center gap-5 md:!py-40">
           <h1>{headline}</h1>
           <PortableText value={content} />
-          <Link href={'/work-with-me'} className='btn'>Discover my offerings</Link>
+          <Link href={'/work-with-me'} className='inner-link'>Work with me</Link>
         </div>
         <div className="about-banner-image flex items-start justify-center"
           // style={{

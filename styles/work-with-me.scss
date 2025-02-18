@@ -75,7 +75,8 @@ section.faq {
 }
 
 .offerings-title {
-  font-size: 2.5em;
+  font-size: 3.5em;
+  line-height: 1em;
   
   @media screen and (max-width: 768px) {
     font-size: 2em;
@@ -85,7 +86,7 @@ section.faq {
 }
 
 .offering-duration {
-  font-size: 1.1em;
+  font-size: 1.5em;
   font-style: italic;
   text-transform: lowercase;
 

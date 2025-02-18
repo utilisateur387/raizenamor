@@ -57,7 +57,7 @@ export default function FaqAccordion({
                   </svg>                  
                 }
               </div>
-              <p style={{ display: accordion[index] }} className='faq-answer mt-3'>{entry.answer}</p>
+              <p style={{ display: accordion[index] }} className='faq-answer my-6'>{entry.answer}</p>
             </div>
 
             {/* Add line between entries except last */}

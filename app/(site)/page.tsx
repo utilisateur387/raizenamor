@@ -19,15 +19,11 @@ export default async function Home() {
     <main id="home" className="min-h-[90vh] overflow-hidden">
 
       {/* BANNER */}
-      <div className="hp-banner-outside outside" style={{ }}>
-        <div className="hp-banner-inside inside">
+      {/* <div className="hp-banner-outside outside">
+        <div className="hp-banner-inside inside"> */}
           <section className="home-banner flex flex-col md:flex-row md:space-x-6 w-full">
-
-            {/* <div className="sm:w-0 lg:w-1/12"></div> */}
-
-
             {/* BANNER TEXT */}
-            <div className="home-banner-intro w-full block md:w-6/12 lg:w-5/12 md:flex items-center justify-center flex-col section-padding">
+            <div className="home-banner-intro w-full block md:w-6/12 md:flex items-center justify-center flex-col section-padding">
               <div className='flex gap-5 flex-col items-start items-center md:items-start'>
                 <h1 className='text-center md:text-left'>{headline}</h1>
                 <p className='text-center md:text-left'>{introParagraph}</p>
@@ -49,26 +45,20 @@ export default async function Home() {
             </div>
             <div className="sm:w-0 lg:w-1/12"></div>
           </section>
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
 
       {/* MISSION */}
-      <section className='section section-padding'>
-        <p className='text-center quote'>{quote}</p>
+      <section className='section section-padding section-quote flex'>
+        <Link href='/about' className='inner-link'>About me</Link>
+        <p className='md:text-left quote'>{quote}</p>
       </section>
 
 
       {/* WORK WITH ME */}
-      <div className="top-bottom-outside outside" style={{ height: '80vh' }}>
-        <div className="top-bottom-inside inside">
-          <section className="flex section px-8" style={{height: '-webkit-fill-available'}}>
-
-            <div className='w-full md:w-6/12 flex items-center justify-center flex-col'>
-              <div>
-                <p>{workWithMe}</p>
-                <Link href='/work-with-me' className='btn'>Work with me</Link>
-              </div>
-            </div>
+      {/* <div className="top-bottom-outside outside" style={{ height: '80vh' }}> */}
+        {/* <div className="top-bottom-inside inside"> */}
+          <section className="flex section px-8 my-[8em]" style={{height: '-webkit-fill-available'}}>
 
             <div className="w-full md:w-6/12 flex items-center justify-center">
               <Image 
@@ -79,68 +69,29 @@ export default async function Home() {
                 className='w-full'
                 sizes='100vw'
                 style={{
-                  maxWidth: "90%",
-                  width: "100%",
-                  height: "100%",
+                  maxWidth: "400px",
+                  width: "80%",
+                  height: "500px",
                   objectFit: "cover",
-                  transform: "translateX(70px)",
-                  borderRadius: "42% 0% 0% 0%",
+                  borderRadius: "0% 10% 0% 10%",
                 }}
               />
+            </div>       
+
+            <div className='w-full md:w-6/12 flex items-center justify-center flex-col'>
+              <div>
+                <p>{workWithMe}</p>
+                <Link href='/work-with-me' className='inner-link block mt-5'>Work with me</Link>
+              </div>
             </div>
 
-            {/* <div className="w-full md:w-6/12 flex items-center justify-center">
-              <Image 
-                src={backgroundImage1.url || ''} 
-                alt={backgroundImage1.alt || ''} 
-                width={0}
-                height={0}
-                className='w-full curvy-container'
-                sizes='100vw'
-                style={{
-                  maxWidth: "90%",
-                  height: 500,
-                  objectFit: "cover",
-                }}
-              />
-            </div> */}
-            
-            {/* <div className="w-full md:w-6/12" style={{ 
-              backgroundImage: `url(${backgroundImage1.url}`,
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-              height: '100%',
-              }}>
-            </div> */}
-
-            {/* <div className="right-outside wwm z-20">
-              <div className="right-inside w-7/12 flex flex-col items-start justify-center gap-5 section-padding !pr-16 md:pr-0">
-                <h2 className='uppercase'>Work with me</h2>
-                <p>{workWithMe}</p>
-                <Link href='/work-with-me' className='btn'>Discover my offerings</Link>
-              </div>
-            </div> */}
-
-            {/* BACKGROUND IMAGE */}
-            {/* <div className="w-2/12 md:w-6/12 hp-bg2" style={{ 
-              backgroundImage: `url(${backgroundImage1.url}`,
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-              position: 'absolute',
-              height: '100%',
-              left: '50%',
-              top: -30,
-              right: 0,
-              }}>
-            </div> */}
-            
           </section>
-        </div>
-      </div>
+        {/* </div> */}
+      {/* </div> */}
 
 
       {/* TESTIMONIALS */}
-      <div className='section-padding section testimonials'>
+      <section className='section-padding section testimonials'>
         <div className="flex justify-start overflow-x-scroll space-x-12">
           {testimonials.map(testimonial => (
             <div className='testimonial-card text-left inline-block' key={testimonial._key}>
@@ -149,9 +100,9 @@ export default async function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* BACKGROUND IMAGE */}
+      {/* BACKGROUND IMAGE 2 */}
       <div className='container-bg2 flex items-center'>
         <Image 
           src={backgroundImage2.url || ''} 
