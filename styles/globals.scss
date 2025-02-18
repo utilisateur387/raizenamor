@@ -291,4 +291,8 @@ section#contact {
   h1 {
     font-size: 4em;
   }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 2em;
+  }
 }
