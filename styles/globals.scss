@@ -75,6 +75,7 @@ footer {
 section {
   margin: 0 auto;
   width: 100%;
+  padding: 2em
 }
 section > div {
   max-width: 1400px;
@@ -156,7 +157,7 @@ button.menu, button.close {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   line-height: 1.1em;
   font-family: $headings;
 
@@ -188,13 +189,13 @@ hr {
   border-top: solid 1px $red;
 }
 
-.section-padding {
-  padding: 6em 2em;
+// .section-padding {
+//   padding: 6em 2em;
 
-  @media screen and (max-width: 768px) {
-    // padding: 6em 0;
-  }
-}
+//   @media screen and (max-width: 768px) {
+//     // padding: 6em 0;
+//   }
+// }
 
 .btn {
   background-color: $red;
@@ -234,17 +235,22 @@ hr {
 }
 .contact-form {
   input[type=text], textarea {
-    background: $red;
+    background: $beige;
     border-bottom: solid 1px $off-white;
-    color: $off-white;
-    // background: $off-white;
+    color: $red;
+    padding: 1.5em;
+    border-radius: 1em;
   }
   input::placeholder, textarea::placeholder {
-    color: $off-white;
-    opacity: 0.7;
+    color: $red;
+    opacity: 0.5;
   }
   input[type=submit] {
-    background-color: $off-white;
-    color: $red
+    background-color: $red;
+    color: $off-white;
   }
+}
+
+section#contact {
+  margin-top: 7em;
 }

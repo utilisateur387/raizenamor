@@ -65,9 +65,8 @@ export default async function Home() {
 
             <div className='w-full md:w-6/12 flex items-center justify-center flex-col'>
               <div>
-                <h2 className='uppercase'>Work with me</h2>
                 <p>{workWithMe}</p>
-                <Link href='/work-with-me' className='btn'>Discover my offerings</Link>
+                <Link href='/work-with-me' className='btn'>Work with me</Link>
               </div>
             </div>
 
