@@ -17,7 +17,7 @@ export default async function About() {
   return (
     <main id="about" className='section min-h-[90vh] overflow-hidden'>
       <section className="about-banner block md:flex">
-        <div className="section-padding flex flex-col items-start justify-center gap-5 md:!py-40">
+        <div className="section-padding flex flex-col items-start justify-center gap-5 md:!pb-10 md:!pt-28 mb-16">
           <h1 className='mb-5'>
             {headline}
             <img src="/icons/heart.svg" className="inline-block ml-3 md:scale-125" alt="Heart"/>
@@ -28,6 +28,7 @@ export default async function About() {
             Work with me
           </Link>
         </div>
+
         <div className="about-banner-image flex items-start justify-center"
           // style={{
           //   backgroundImage: `url(${portrait.url})`,
@@ -40,7 +41,7 @@ export default async function About() {
               width={0}
               height={0}
               alt={portrait.alt}
-              className='w-full'
+              className='w-full mix-blend-multiply'
               sizes='50vw'
               priority
             />
@@ -51,7 +52,7 @@ export default async function About() {
         <h2 className='text-center uppercase mb-8'>Certifications</h2>
 
         <div className="md:flex gap-12">
-          <div className="w-0 md:w-1/12"></div>
+          <div className="hidden lg:block md:w-1/12"></div>
           <div className="w-full md:w-5/12 mb-8 md:mb-0">
             <PortableText value={certificationText} />
           </div>
@@ -62,7 +63,7 @@ export default async function About() {
               })}
             </ul>
           </div>
-          <div className="w-0 md:w-1/12"></div>
+          <div className="hidden lg:block md:w-1/12"></div>
         </div>
       </section>
     </main>

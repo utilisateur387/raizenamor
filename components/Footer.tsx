@@ -9,11 +9,11 @@ export default async function Footer() {
 
   return (
     <footer className='py-12 relative'>
-      <div className='flex justify-center flex-col text-center space-y-3 pb-12'>
-        <Link className="block" href={`https://www.instagram.com/${instagram}`} target='_blank'>Instagram</Link>
-        <Link className="block" href='/about'>About</Link>
-        <Link className="block" href='/work-with-me'>Work with me</Link>
-        <Link className="block" href='/contact'>Contact</Link>
+      <div className='flex justify-cente items-center flex-col text-center space-y-3 pb-12'>
+        <Link href={`https://www.instagram.com/${instagram}`} target='_blank'>Instagram</Link>
+        <Link href='/about'>About</Link>
+        <Link href='/work-with-me'>Work with me</Link>
+        <Link href='/contact'>Contact</Link>
       </div>
       <div className='copyright'>
         {copyright}
