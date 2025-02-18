@@ -27,7 +27,7 @@ const reckless = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'RAIZ EN AMOR',
+  title: 'Raiz en Amor',
   description: 'Reiki practitioner',
 }
 
@@ -38,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" id='root'>
-      <body className={`${reckless.variable} ${gtCinetype.variable}`}>
+      <body className={`${reckless.variable} ${gtCinetype.variable} flex flex-col min-h-screen`}>
       {/* <body className={`${ibm.className} ${gtCinetype.variable}`}> */}
         <NavbarDesktop />
         <NavbarMobile />
