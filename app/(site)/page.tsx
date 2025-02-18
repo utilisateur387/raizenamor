@@ -49,45 +49,34 @@ export default async function Home() {
       </div> */}
 
       {/* MISSION */}
-      <section className='section section-padding section-quote flex'>
-        <Link href='/about' className='inner-link'>About me</Link>
+      <section className='section section-padding section-quote block md:flex'>
+        <Link href='/about' className='inner-link block mb-5'>About me</Link>
         <p className='md:text-left quote'>{quote}</p>
       </section>
 
 
       {/* WORK WITH ME */}
-      {/* <div className="top-bottom-outside outside" style={{ height: '80vh' }}> */}
-        {/* <div className="top-bottom-inside inside"> */}
-          <section className="flex section px-8 my-[8em]" style={{height: '-webkit-fill-available'}}>
+      <section className="block md:flex section px-8 my-10 md:my-[8em]" style={{height: '-webkit-fill-available'}}>
 
-            <div className="w-full md:w-6/12 flex items-center justify-center">
-              <Image 
-                src={backgroundImage1.url || ''} 
-                alt={backgroundImage1.alt || ''} 
-                width={0}
-                height={0}
-                className='w-full'
-                sizes='100vw'
-                style={{
-                  maxWidth: "400px",
-                  width: "80%",
-                  height: "500px",
-                  objectFit: "cover",
-                  borderRadius: "0% 10% 0% 10%",
-                }}
-              />
-            </div>       
+        <div className="w-full md:w-6/12 flex items-center justify-center">
+          <Image 
+            src={backgroundImage1.url || ''} 
+            alt={backgroundImage1.alt || ''} 
+            width={0}
+            height={0}
+            className='w-full'
+            sizes='100vw'
+            id="hp-bg-1"
+          />
+        </div>       
 
-            <div className='w-full md:w-6/12 flex items-center justify-center flex-col'>
-              <div>
-                <p>{workWithMe}</p>
-                <Link href='/work-with-me' className='inner-link block mt-5'>Work with me</Link>
-              </div>
-            </div>
-
-          </section>
-        {/* </div> */}
-      {/* </div> */}
+        <div className='w-full md:w-6/12 flex items-center justify-center flex-col'>
+          <div>
+            <p>{workWithMe}</p>
+            <Link href='/work-with-me' className='inner-link block mt-5'>Work with me</Link>
+          </div>
+        </div>
+      </section>
 
 
       {/* TESTIMONIALS */}

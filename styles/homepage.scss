@@ -4,9 +4,10 @@ main#home {
 
 .home-banner {
   min-height: 80vh;
+  flex-flow: column-reverse;
 
   @media screen and (max-width: 768px) {
-    margin-top: 100px;
+    margin-bottom: 4em;
 
     & > div:first-child {
         margin-top: 5em;
@@ -15,10 +16,6 @@ main#home {
 }
 
 .home-banner-intro {
-  @media screen and (max-width: 768px) {
-    padding-top: 2em !important;
-  }
-
   & div {
     max-width: 700px;
   
@@ -27,42 +24,38 @@ main#home {
       margin: 0 auto;
     }
   }
-
-  // h1 {
-  //   font-size: 5em;
-  //   line-height: 0.95em;
-  // }
 }
 
+#hp-bg-1 {
+  max-width: 400px;
+  width: 80%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 0% 10% 0% 10%;
 
-.container-bg2 {
-  max-height: 300px;
-  overflow: hidden;
-  transform: scale(1.5);
-  z-index: -100;
-  position: relative;
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    height: 300px;
+    margin-bottom: 2em;
+    margin-top: -10em;
+    z-index: -2;
+  }
 }
+
+// .container-bg2 {
+//   max-height: 300px;
+//   overflow: hidden;
+//   transform: scale(1.5);
+//   z-index: -100;
+//   position: relative;
+// }
 
 .headshot-desktop {
   width: 80%;
   max-width: 400px;
-  // &::before {
-  //   content: "";
-  //   background-color: $beige;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 30px;
-  //   bottom: 0;
-  //   z-index: -10;
-  //   width: 50%;
-  //   border-radius: 30% 50% 0% 0%; /* Asymmetrical organic feel */
-  //   transform: rotate(-3deg) scaleX(150%) scaleY(110%);/* A slight rotation for an organic appearance */
-  //   transition: all ease 1s;
-  // }
+
   @media screen and (max-width: 768px) {
       width: 200px;
-      // overflow: hidden;
   }
 }
 

@@ -29,6 +29,10 @@ body {
 p {
   font-size: 1.4em;
   line-height: 1.3em;
+
+  @media screen and (max-width: 768px) {
+    // font-size: 1.2em;
+  }
 }
 footer {
   color: $off-white;
@@ -103,6 +107,9 @@ nav.desktop {
   a {
     font-size: $body;
     text-transform: uppercase;
+    font-family: $headings;
+    text-transform: none;
+    font-size: 1.2em;
   }
 }
 
@@ -110,6 +117,11 @@ nav.mobile {
   position: fixed;
   top: 0;
   left: 0;
+
+  a {
+    font-family: $headings;
+    text-transform: none;
+  }
 }
 
 button.menu, button.close {
@@ -180,7 +192,7 @@ h2 {
 
 p {
   @media screen and (max-width: 768px) {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 
@@ -212,6 +224,10 @@ hr {
   letter-spacing: 2px;
   font-size: 20px;
   text-decoration: underline;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1em;
+  }
 }
 
 .gt {
