@@ -24,7 +24,11 @@
 body {
   color: $red;
   background: $off-white;
-  // font-family: var(--font-ibm);
+  font-family: $body;
+}
+p {
+  font-size: 1.4em;
+  line-height: 1.3em;
 }
 footer {
   // background-color: $red;
@@ -87,10 +91,15 @@ nav {
 }
 
 nav.desktop {
-  background: $red;
+  // background: $red;
   height: 90px;
   -webkit-clip-path: url(#navCurve);
   clip-path: url(#navCurve);
+
+  a {
+    font-size: $body;
+    text-transform: uppercase;
+  }
 }
 
 nav.mobile {
@@ -146,7 +155,7 @@ button.menu, button.close {
 h1 {
   font-size: 3em;
   line-height: 1.1em;
-  font-family: $gt;
+  font-family: $headings;
 
   @media screen and (max-width: 768px) {
     font-size: 2.25em;
@@ -157,9 +166,9 @@ h1 {
 h2 {
   font-size: 1.7em;
   letter-spacing: 1px;
-  font-family: $gt;
+  font-family: $headings;
   line-height: 1em;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   @media screen and (max-width: 768px) {
     font-size: 1em;
@@ -194,25 +203,20 @@ hr {
   letter-spacing: 1px;
 }
 
-.quote {
- font-size: 2em;
- font-family: $gt;
- max-width: 800px;
- line-height: 1.2em;
- font-style: italic;
- margin: 0 auto;
-
-  @media screen and (max-width: 768px) {
-    font-size: 1.5em;
-  }
+.inner-link {
+  font-family: $body;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 .gt {
-  font-family: $gt;
+  font-family: $headings;
 }
 
 .question {
-  font-family: $gt;
+  font-family: $headings;
   font-size: 2em;
   max-width: 85%;
   line-height: 1.2em;

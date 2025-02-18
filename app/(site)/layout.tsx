@@ -16,6 +16,16 @@ const gtSuper = localFont({
   variable: '--font-gt'
 })
 
+const gtCinetype = localFont({
+  src: '../../styles/fonts/GT-Cinetype-Regular.ttf',
+  variable: '--font-gt-cinetype'
+})
+
+const reckless = localFont({
+  src: '../../styles/fonts/RecklessNeue-Book.ttf',
+  variable: '--font-reckless'
+})
+
 export const metadata: Metadata = {
   title: 'RAIZ EN AMOR',
   description: 'Reiki practitioner',
@@ -28,7 +38,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" id='root'>
-      <body className={`${ibm.className} ${gtSuper.variable}`}>
+      <body className={`${reckless.variable} ${gtCinetype.variable}`}>
+      {/* <body className={`${ibm.className} ${gtCinetype.variable}`}> */}
         <NavbarDesktop />
         <NavbarMobile />
         {children}

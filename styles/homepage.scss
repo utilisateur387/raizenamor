@@ -27,6 +27,11 @@ main#home {
       margin: 0 auto;
     }
   }
+
+  h1 {
+    font-size: 5em;
+    line-height: 0.95em;
+  }
 }
 
 
@@ -74,6 +79,18 @@ main#home {
     overflow: hidden;
   }
 }
+
+.quote {
+  font-size: 4em;
+  font-family: $headings;
+  max-width: 800px;
+  line-height: .95em;
+  margin: 0 auto;
+ 
+   @media screen and (max-width: 768px) {
+     font-size: 1.5em;
+   }
+ }
 
 .hp-bg2 {
   background-position: center;

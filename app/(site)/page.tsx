@@ -23,8 +23,19 @@ export default async function Home() {
         <div className="hp-banner-inside inside">
           <section className="home-banner flex flex-col md:flex-row md:space-x-6 w-full">
 
+            {/* <div className="sm:w-0 lg:w-1/12"></div> */}
+
+
+            {/* BANNER TEXT */}
+            <div className="home-banner-intro w-full block md:w-6/12 lg:w-5/12 md:flex items-center justify-center flex-col section-padding">
+              <div className='flex gap-5 flex-col items-start items-center md:items-start'>
+                <h1 className='text-center md:text-left'>{headline}</h1>
+                <p className='text-center md:text-left'>{introParagraph}</p>
+                <Link href='/about' className='inner-link md:text-left'>Learn more</Link>
+              </div>
+            </div>
+
             {/* HEADSHOT */}
-            <div className="sm:w-0 lg:w-1/12"></div>
             <div className="w-full md:w-6/12 lg:w-5/12 flex items-center justify-center" >
               <Image
                 src={headshot?.url || ''} 
@@ -35,16 +46,6 @@ export default async function Home() {
                 sizes='60vw'
                 priority
               />
-            </div>
-
-            <div className="home-banner-intro w-full block md:w-6/12 lg:w-5/12 md:flex items-center justify-center flex-col section-padding">
-              <div className='flex gap-5 flex-col items-start items-center md:items-start'>
-
-                {/* BANNER TEXT */}
-                <h1 className='uppercase text-center md:text-left'>{headline}</h1>
-                <p className='text-center md:text-left'>{introParagraph}</p>
-                <Link href='/about' className='btn text-center md:text-left'>Learn more</Link>
-              </div>
             </div>
             <div className="sm:w-0 lg:w-1/12"></div>
           </section>
@@ -143,9 +144,9 @@ export default async function Home() {
       <div className='section-padding section testimonials'>
         <div className="flex justify-start overflow-x-scroll space-x-12">
           {testimonials.map(testimonial => (
-            <div className='testimonial-card text-center inline-block' key={testimonial._key}>
+            <div className='testimonial-card text-left inline-block' key={testimonial._key}>
               <p>{testimonial.text}</p>
-              <p className='mt-2'>{testimonial.author}</p>
+              <p className='mt-6'>{testimonial.author}</p>
             </div>
           ))}
         </div>

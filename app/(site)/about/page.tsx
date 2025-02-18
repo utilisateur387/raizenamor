@@ -18,7 +18,7 @@ export default async function About() {
     <main id="about" className='section min-h-[90vh] overflow-hidden'>
       <section className="about-banner block md:flex">
         <div className="section-padding flex flex-col items-start justify-center gap-5 md:!py-40">
-          <h1 className='uppercase'>{headline}</h1>
+          <h1>{headline}</h1>
           <PortableText value={content} />
           <Link href={'/work-with-me'} className='btn'>Discover my offerings</Link>
         </div>
