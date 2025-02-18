@@ -9,15 +9,17 @@ export default async function Footer() {
 
   return (
     <footer className='py-12 relative'>
-      <div className='flex justify-center flex-col text-center space-y-3'>
+      <div className='flex justify-center flex-col text-center space-y-3 pb-12'>
         <Link className="block" href={`https://www.instagram.com/${instagram}`} target='_blank'>Instagram</Link>
         <Link className="block" href='/about'>About</Link>
         <Link className="block" href='/work-with-me'>Work with me</Link>
         <Link className="block" href='/contact'>Contact</Link>
       </div>
-      <div className='mt-10 copyright'>
+      <div className='copyright'>
         {copyright}
       </div>
+
+      <img src="/icons/flower.svg" className="flower" alt="Arrow right"/>
     </footer>
   )
 }

@@ -5,9 +5,12 @@ main#home {
 .home-banner {
   min-height: 80vh;
   flex-flow: column-reverse;
+  padding-top: 8em;
+  padding-bottom: 10em;
 
   @media screen and (max-width: 768px) {
     margin-bottom: 4em;
+    padding-bottom: 2em;
 
     & > div:first-child {
         margin-top: 5em;
@@ -17,14 +20,20 @@ main#home {
 
 .home-banner-intro {
   & div {
-    max-width: 700px;
+    // max-width: 700px;
   
     @media screen and (max-width: 768px) {
-      max-width: 470px;
+      // max-width: 470px;
       margin: 0 auto;
     }
   }
 }
+
+// .container-bg-1 {
+//   @media screen and (max-width: 767px) {
+//     height: 120px;
+//   }
+// }
 
 #hp-bg-1 {
   max-width: 400px;
@@ -33,13 +42,26 @@ main#home {
   object-fit: cover;
   border-radius: 0% 10% 0% 10%;
 
-  @media screen and (max-width: 768px) {
-    width: 100vw;
-    height: 300px;
+  @media screen and (max-width: 767px) {
+    border-radius: 0% 10% 0% 10%;
+    width: 100%;
+    height: 200px;
     margin-bottom: 2em;
-    margin-top: -10em;
     z-index: -2;
+    max-width: none;
   }
+
+  // @media screen and (max-width: 767px) {
+  //   width: 100vw;
+  //   height: 300px;
+  //   margin-bottom: 2em;
+  //   margin-top: -13em;
+  //   z-index: -2;
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   max-width: none;
+  // }
 }
 
 // .container-bg2 {
@@ -51,11 +73,17 @@ main#home {
 // }
 
 .headshot-desktop {
-  width: 80%;
-  max-width: 400px;
+  // width: 80%;
+  // max-width: 400px;
+  border-radius: 2px 30%;
+  max-height: 70vh;
+  object-fit: cover;
+  max-width: 70%;
 
   @media screen and (max-width: 768px) {
       width: 200px;
+      max-width: none;
+      max-height: none;
   }
 }
 
@@ -98,7 +126,7 @@ main#home {
   margin: 0 auto;
  
    @media screen and (max-width: 768px) {
-     font-size: 1.5em;
+     font-size: 2.5em;
    }
  }
 

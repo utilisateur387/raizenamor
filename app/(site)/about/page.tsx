@@ -18,9 +18,15 @@ export default async function About() {
     <main id="about" className='section min-h-[90vh] overflow-hidden'>
       <section className="about-banner block md:flex">
         <div className="section-padding flex flex-col items-start justify-center gap-5 md:!py-40">
-          <h1>{headline}</h1>
+          <h1 className='mb-5'>
+            {headline}
+            <img src="/icons/heart.svg" className="inline-block ml-3 md:scale-125" alt="Heart"/>
+          </h1>
           <PortableText value={content} />
-          <Link href={'/work-with-me'} className='inner-link'>Work with me</Link>
+          <Link href={'/work-with-me'} className='inner-link'>
+            <img src="/icons/arrow-right.svg" className="inline-block mr-2" alt="Arrow right"/>
+            Work with me
+          </Link>
         </div>
         <div className="about-banner-image flex items-start justify-center"
           // style={{
