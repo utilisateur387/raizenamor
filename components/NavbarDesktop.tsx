@@ -11,6 +11,7 @@ export default function NavbarDesktop() {
             <div className='flex items-center'>
               <Link href='/work-with-me'>Work with me</Link>
               <Link href='/about' className='ml-5'>About</Link>
+              <Link href='/contact' className='ml-5'>Contact</Link>
             </div>
           </div>
         </div>

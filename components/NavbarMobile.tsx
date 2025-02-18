@@ -62,6 +62,7 @@ export default function NavbarMobile() {
           <li><Link href='/' onClick={handleLinkClick}>Home</Link></li>
           <li><Link href='/work-with-me' onClick={handleLinkClick}>Work with me</Link></li>
           <li><Link href='/about' onClick={handleLinkClick}>About</Link></li>
+          <li><Link href='/contact' onClick={handleLinkClick}>Contact</Link></li>
         </ul>
       </div>
     </nav>
