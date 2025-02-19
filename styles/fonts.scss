@@ -8,7 +8,7 @@ h1 {
   font-family: $headings;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5em;
+    font-size: 3em;
     line-height: 1em;
   }
 
@@ -23,7 +23,7 @@ section#contact h1 {
   font-size: 4em;
 
   @media screen and (max-width: 768px) {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 }
 
@@ -117,13 +117,13 @@ nav.mobile a {
     font-size: 1.4em;
   }
 
-  @media screen and (max-width: 450px) {
-    font-size: 1.1em;
-  }
+  // @media screen and (max-width: 450px) {
+  //   font-size: 1.4em;
+  // }
 
-  @media screen and (max-width: 375px) {
-    max-width: 250px;
-  }
+  // @media screen and (max-width: 375px) {
+  //   max-width: 280px;
+  // }
 }
 
 p.author {
