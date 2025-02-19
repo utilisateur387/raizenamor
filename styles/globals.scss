@@ -2,7 +2,7 @@
 @use 'tailwindcss/components';
 @use 'tailwindcss/utilities';
 
-@import '@styles/variables.scss';
+@import '@styles/variables.module.scss';
 @import '@styles/beziers.scss';
 @import '@styles/homepage.scss';
 @import '@styles/work-with-me.scss';
@@ -155,10 +155,17 @@ button.menu, button.close {
 }
 
 .menu {
-  border: solid 1px $red;
   border-radius: 30%;
   padding: 1em;
-  background-color: $off-white;
+  transition: all ease .2s;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: .8em;
+  
+  &:hover {
+    border-color: $secondary !important;
+    color: $secondary !important;
+  }
 }
 
 .close {
@@ -173,12 +180,13 @@ button.menu, button.close {
   position: fixed;
   left: 0;
   width: 100vw;
-  height: 40vh;
-  padding: 2em;
+  // height: 40vh;
+  padding: 4em 2em;
   transition: top ease 300ms;
 
   ul {
     margin-top: 3em;
+    gap: .5em;
   }
   li {
     font-size: 1.7em;

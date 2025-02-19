@@ -6,3 +6,8 @@ $secondary: rgb(166, 193, 255);
 
 $body: var(--font-gt-cinetype), sans-serif;
 $headings: var(--font-reckless), serif;
+
+:export {
+  offWhite: $off-white;
+  red: $red;
+}

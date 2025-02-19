@@ -4,6 +4,8 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useWindowSize } from "@uidotdev/usehooks";
+import variables from '../styles/variables.module.scss';
+
 
 export default function NavbarMobile() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -21,7 +23,7 @@ export default function NavbarMobile() {
   }, [size])
 
   function handleMenuBtnClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
-    setIsMenuVisible(true);
+    setIsMenuVisible(!isMenuVisible);
   }
 
   const handleCloseBtnClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -36,12 +38,18 @@ export default function NavbarMobile() {
     <nav className='mobile flex items-center justify-end md:hidden'>
       <button 
         className='menu'
+        style={{ 
+          zIndex: 1000,
+          border: `solid 1px ${!isMenuVisible ? variables.red : variables.offWhite}`,
+          backgroundColor: `${!isMenuVisible ? variables.offWhite : 'rgba(0,0,0,0)'}`,
+          color: `${isMenuVisible ? variables.offWhite : variables.red}`,
+        }}
         onClick={handleMenuBtnClick}>
-          Menu
+          {isMenuVisible ? 'Close' : 'Menu'}
       </button>
 
       <div 
-        className={`menu-panel flex justify-center items-center py-4 gt uppercase overflow-hidden`}
+        className={`menu-panel flex justify-center items-center gt uppercase overflow-hidden`}
         style={{
           top: isMenuVisible ? 0 : '-40vh',
           opacity: isMenuVisible ? 1 : 0,
@@ -52,11 +60,11 @@ export default function NavbarMobile() {
             // top: isMenuVisible ? 0 : '-40vh',
             // opacity: isMenuVisible ? 1 : 0,
           }}>
-          <button 
+          {/* <button 
             className='close'
             onClick={handleCloseBtnClick}>
               Close
-          </button>
+          </button> */}
         </div>
         <ul className='flex items-center flex-col'>
           <li><Link href='/' onClick={handleLinkClick}>Home</Link></li>
