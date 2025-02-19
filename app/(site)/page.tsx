@@ -23,7 +23,7 @@ export default async function Home() {
 
         {/* BANNER TEXT */}
         <div className="home-banner-intro w-full block md:w-6/12 md:flex items-center justify-center flex-col">
-          <div className='flex gap-6 md:gap-10 flex-col items-start md:items-start'>
+          <div className='flex space-y-6 md:space-y-10 flex-col items-start md:items-start'>
             <h1 className='md:text-left'>
               {headline}
               <img src="/icons/sun.svg" className="inline-block ml-1 -translate-y-1" alt="Sun"/>
@@ -65,7 +65,7 @@ export default async function Home() {
 
 
       {/* WORK WITH ME */}
-      <section className="work-with-me block md:flex section mb-20 mt-16 md:my-10 md:my-[8em] md:space-x-5 md:gap-10 lg:gap-10" style={{height: '-webkit-fill-available'}}>
+      <section className="work-with-me block md:flex section mb-20 mt-16 md:my-10 md:my-[8em] md:space-x-10 justify-center">
 
         <div className="w-none lg:w-1/12"></div>
         <div className="w-full md:w-6/12 lg:w-5/12 flex items-center justify-center">

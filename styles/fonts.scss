@@ -58,6 +58,13 @@ p {
   @media screen and (max-width: 768px) {
     font-size: 1em;
   }
+
+  @media screen and (min-width: 1900px) {
+    font-size: 1.7em;
+  }
+  @media screen and (min-width: 2400px) {
+    font-size: 2.5em;
+  }
 }
 
 a {
@@ -74,6 +81,10 @@ a {
 
   @media screen and (max-width: 768px) {
     font-size: 1em;
+  }
+
+  @media screen and (min-width: 1900px) {
+    font-size: 1.5em;
   }
 }
 

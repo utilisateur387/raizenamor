@@ -81,11 +81,13 @@ footer {
     }
   }
 }
+
 footer {
   padding-left: 2em;
   padding-right: 2em;
   margin-top: auto;
 }
+
 section {
   margin: 0 auto;
   width: 100%;
@@ -95,15 +97,13 @@ section {
     padding: 2em 1.25em;
   }
 }
-// section > div {
-//   max-width: 1400px;
-//   margin: 0 auto;
-// }
+
 nav {
   position: fixed;
   width: 100vw;
   z-index: 1000;
 }
+
 .nav-content {
   padding-left: 2em;
   padding-right: 2em;
@@ -154,7 +154,7 @@ button.menu, button.close {
   position: fixed;
   left: 0;
   width: 100vw;
-  height: 50vh;
+  height: 55vh;
   padding: 4em 2em;
   transition: top ease 300ms;
   overflow: visible;
@@ -162,11 +162,19 @@ button.menu, button.close {
   ul {
     margin-top: 3em;
     gap: .5em;
+
+    @media screen and (max-width: 768px) {
+      gap: 0;
+    }
   }
 
   li {
     font-size: 1.7em;
     padding-bottom: 1em;
+
+    @media screen and (max-width: 768px) {
+      padding-bottom: 0.3em;
+    }
   }
 
   &::before {
@@ -200,7 +208,7 @@ hr {
   &:hover {
     background-color: $secondary;
     transition: all .4s ease;
-    color: $red;
+    // color: $off-white;
   }
 }
 
