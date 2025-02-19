@@ -22,7 +22,7 @@ export default function Testimonials({ testimonials }: Props) {
     <section className='section-padding section testimonials'>
         <h3 className='h3-title'>Testimonials</h3>
 
-        <div className="flex justify-between w-full md:space-x-12">
+        <div className="flex justify-between w-full md:space-x-12 md:items-center">
           <div className="hidden md:block md:w-1/12 flex flex-col justify-center items-center" onClick={showPreviousQuote}>
             <h2 className='testimonial-count hidden md:block'>{inView + 1}/{testimonials.length}</h2>
             
@@ -41,8 +41,8 @@ export default function Testimonials({ testimonials }: Props) {
           </div>
         </div>
 
+        {/* Testimonials arrow and count on mobile */}
         <div className="flex justify-between items-center mt-8">
-            
           <div className="block md:hidden flex flex-col justify-center items-center" onClick={showPreviousQuote}>
             <img src="/icons/arrow-left.svg" className="inline-block cursor-pointer scale-125" alt="Arrow left"/>
           </div>
