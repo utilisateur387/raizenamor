@@ -32,16 +32,16 @@ main#home {
 }
 
 #hp-bg-1 {
-  // max-width: 400px;
-  // width: 80%;
   height: -webkit-fill-available !important;
+  max-width: 400px;
   object-fit: cover;
-  // border-radius: 0% 10% 0% 10%;
+  border-radius: 4px 20%;
 
   @media screen and (max-width: 767px) {
-    border-radius: 0% 10% 0% 10%;
+    border-radius: 4px 30%;
     width: 100%;
-    height: 200px;
+    height: 200px !important;
+    max-width: 500px !important;
     margin-bottom: 2em;
     z-index: -2;
     max-width: none;
@@ -138,7 +138,16 @@ main#home {
     bottom: 0;
     z-index: -1;
     border-radius: 30% 20% 20% 15%; /* Asymmetrical organic feel */
-    transform: rotate(3deg) scaleX(1.4) scaleY(1.3);/* A slight rotation for an organic appearance */    transition: all ease 1s;
+    transform: rotate(3deg) scaleX(1.4) scaleY(1.3) translateY(2em);/* A slight rotation for an organic appearance */    
+    transition: all ease 1s;
+
+    @media screen and (max-width: 768px) {
+      transform: rotate(3deg) scaleX(1.4) scaleY(1.2) translateY(1em);  
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 5em;
   }
 }
 

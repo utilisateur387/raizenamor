@@ -1,3 +1,4 @@
+import Testimonials from '@/components/Testimonials';
 import { getHomepage } from '@/sanity/schemas/sanity-utils'
 import Image from 'next/image'
 import Link from 'next/link';
@@ -12,7 +13,6 @@ export default async function Home() {
     testimonials, 
     headshot, 
     backgroundImage1, 
-    backgroundImage2,
   } = content;
 
   return (
@@ -69,22 +69,18 @@ export default async function Home() {
 
 
       {/* WORK WITH ME */}
-      <section className="work-with-me block md:flex section mb-20 mt-16 md:my-10 md:my-[8em] md:space-x-5" style={{height: '-webkit-fill-available'}}>
+      <section className="work-with-me block md:flex section mb-20 mt-16 md:my-10 md:my-[8em] md:space-x-5 md:gap-10 lg:gap-10" style={{height: '-webkit-fill-available'}}>
 
         <div className="w-none lg:w-1/12"></div>
         <div className="w-full md:w-6/12 lg:w-5/12 flex items-center justify-center">
           <Image 
-            src={backgroundImage2.url || ''} 
-            alt={backgroundImage2.alt || ''} 
+            src={backgroundImage1?.url || ''} 
+            alt={backgroundImage1?.alt || ''} 
             width={0}
             height={0}
-            // className='w-full'
             sizes='100vw'
             id="hp-bg-1"
-
             layout="responsive"
-            // width={300}
-            // height={400} // 16:10 aspect ratio
             objectFit="cover"
             style={{
               height: 'auto'
@@ -92,7 +88,7 @@ export default async function Home() {
           />
         </div>       
 
-        <div className='w-full md:w-6/12 lg:w-5/12 flex items-center justify-center flex-col'>
+        <div className='w-full md:w-6/12 lg:w-5/12 flex items-center justify-center flex-col max-w-xl'>
           <div>
             <p>{workWithMe}</p>
             <Link href='/work-with-me' className='inner-link block mt-5'>
@@ -107,30 +103,7 @@ export default async function Home() {
 
 
       {/* TESTIMONIALS */}
-      <section className='section-padding section testimonials'>
-        <h3 className='h3-title'>Testimonials</h3>
-
-        <div className="flex justify-start overflow-x-scroll space-x-12">
-          {testimonials.map(testimonial => (
-            <div className='testimonial-card text-left inline-block' key={testimonial._key}>
-              <p>{testimonial.text}</p>
-              <p className='mt-6'>{testimonial.author}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* BACKGROUND IMAGE 2 */}
-      {/* <div className='container-bg2 flex items-center'>
-        <Image 
-          src={backgroundImage2.url || ''} 
-          alt={backgroundImage2.alt || ''} 
-          width={0}
-          height={0}
-          className='w-full'
-          sizes='100vw'
-        />
-      </div>       */}
+      <Testimonials testimonials={testimonials} />
     </main>
   )
 }

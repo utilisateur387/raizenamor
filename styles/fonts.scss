@@ -36,7 +36,6 @@ h2 {
   @media screen and (max-width: 768px) {
     font-size: 1em;
   }
-
 }
 
 h3.h3-title {
@@ -46,6 +45,10 @@ h3.h3-title {
   font-size: 1.1em;
   font-family: $body;
   letter-spacing: 0.5px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1.5em;
+  }
 }
 
 p {

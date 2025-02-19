@@ -42,8 +42,8 @@ export default function NavbarMobile() {
         className='menu'
         style={{ 
           zIndex: 1000,
-          border: `solid 1px ${!isMenuVisible ? variables.red : variables.offWhite}`,
-          backgroundColor: `${!isMenuVisible ? variables.offWhite : 'rgba(0,0,0,0)'}`,
+          border: !isMenuVisible ? 'none' : `solid 1px ${variables.offWhite}`,
+          backgroundColor: `${!isMenuVisible ? variables.beige : 'rgba(0,0,0,0)'}`,
           color: `${isMenuVisible ? variables.offWhite : variables.red}`,
         }}
         onClick={handleMenuBtnClick}>
