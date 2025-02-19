@@ -26,7 +26,7 @@ export default function Testimonials({ testimonials }: Props) {
     <section className='section-padding section testimonials'>
         <h3 className='h3-title'>Testimonials</h3>
 
-        <div className="flex justify-between w-full space-x-12">
+        <div className="flex justify-between w-full md:space-x-12">
           <div className="w-1/12 flex flex-col justify-center items-center">
             <h2 className='testimonial-count'>{inView + 1}/{testimonials.length}</h2>
             

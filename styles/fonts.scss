@@ -105,6 +105,14 @@ nav.mobile a {
   @media screen and (max-width: 768px) {
     font-size: 1.4em;
   }
+
+  @media screen and (max-width: 450px) {
+    font-size: 1.1em;
+  }
+
+  @media screen and (max-width: 375px) {
+    max-width: 250px;
+  }
 }
 
 p.author {
