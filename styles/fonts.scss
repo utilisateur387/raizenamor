@@ -52,7 +52,7 @@ h3.h3-title {
 }
 
 p {
-  font-size: 1.4em;
+  font-size: 1.3em;
   line-height: 1.3em;
 
   @media screen and (max-width: 768px) {
@@ -87,3 +87,28 @@ nav.mobile a {
   text-decoration: underline;
 }
 
+.quote {
+  font-size: 4em;
+  font-family: $headings;
+  line-height: .95em;
+ 
+  @media screen and (max-width: 768px) {
+    font-size: 2.5em;
+  } 
+}
+
+.testimonial-card p {
+  font-family: $headings;
+  font-size: 2em;
+  line-height: 1.2em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.4em;
+  }
+}
+
+p.author {
+  font-family: $body;
+  text-transform: uppercase;
+  font-size: 1em;
+}

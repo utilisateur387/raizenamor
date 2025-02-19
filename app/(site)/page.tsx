@@ -19,41 +19,37 @@ export default async function Home() {
     <main id="home" className="min-h-[90vh] overflow-hidden">
 
       {/* BANNER */}
-      {/* <div className="hp-banner-outside outside">
-        <div className="hp-banner-inside inside"> */}
-          <section className="home-banner flex flex-col md:flex-row md:space-x-6 w-full section-padding">
-            {/* BANNER TEXT */}
-            <div className="home-banner-intro w-full block md:w-6/12 md:flex items-center justify-center flex-col">
-              <div className='flex gap-5 flex-col items-start md:items-start'>
-                <h1 className='md:text-left'>
-                  {headline}
-                  <img src="/icons/sun.svg" className="inline-block ml-1 -translate-y-1" alt="Sun"/>
-                </h1>
+      <section className="home-banner flex flex-col md:flex-row md:space-x-6 w-full section-padding">
 
-                <p className='md:text-left'>{introParagraph}</p>
-                <Link href='/about' className='inner-link md:text-left'>
-                  <img src="/icons/arrow-right.svg" className="inline-block mr-2" alt="Arrow right"/>
-                  Learn more
-                </Link>
-              </div>
-            </div>
+        {/* BANNER TEXT */}
+        <div className="home-banner-intro w-full block md:w-6/12 md:flex items-center justify-center flex-col">
+          <div className='flex gap-6 md:gap-10 flex-col items-start md:items-start'>
+            <h1 className='md:text-left'>
+              {headline}
+              <img src="/icons/sun.svg" className="inline-block ml-1 -translate-y-1" alt="Sun"/>
+            </h1>
 
-            {/* HEADSHOT */}
-            <div className="w-full md:w-6/12 lg:w-6/12 flex items-center justify-center" >
-              <Image
-                src={headshot?.url || ''} 
-                alt={headshot?.url || ''} 
-                width={0}
-                height={0}
-                className='headshot-desktop w-full mix-blend-multiply'
-                sizes='60vw'
-                priority
-              />
-            </div>
-            {/* <div className="sm:w-0 lg:w-1/12"></div> */}
-          </section>
-        {/* </div>
-      </div> */}
+            <p className='md:text-left'>{introParagraph}</p>
+            <Link href='/about' className='inner-link md:text-left'>
+              <img src="/icons/arrow-right.svg" className="inline-block mr-2" alt="Arrow right"/>
+              Learn more
+            </Link>
+          </div>
+        </div>
+
+        {/* HEADSHOT */}
+        <div className="w-full md:w-6/12 lg:w-6/12 flex items-center justify-center" >
+          <Image
+            src={headshot?.url || ''} 
+            alt={headshot?.url || ''} 
+            width={0}
+            height={0}
+            className='headshot-desktop w-full mix-blend-multiply'
+            sizes='60vw'
+            priority
+          />
+        </div>
+      </section>
 
       {/* MISSION */}
       <section className='section section-padding section-quote block md:flex'>
