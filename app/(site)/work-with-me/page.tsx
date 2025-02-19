@@ -32,9 +32,9 @@ export default async function WorkWithMe() {
         <section className=''>
           {offerings.map(offering => (
             <div key={offering._key} className='offering mb-6 block md:flex space-x-0 md:space-x-4'>
-              <div className='w-full md:w-6/12 mb-8 md:mb-0 flex flex-col justify-between'>
+              <div className='w-full md:w-6/12 mb-4 md:mb-0 flex flex-col justify-between'>
                 <div>
-                  <h2 className='offerings-title max-w-md mb-2'>{offering.title}</h2>
+                  <h2 className='offerings-title md:max-w-md mb-2'>{offering.title}</h2>
                   <h3 className='offering-duration md:mb-4'>{offering.duration}</h3>
                 </div>
                 
@@ -47,7 +47,7 @@ export default async function WorkWithMe() {
                 <PortableText value={offering.description} />
                 
                 {/* Book button mobile */}
-                <div className='block md:hidden mt-5'>
+                <div className='text-center md:hidden mt-5'>
                   <CalendlyEmbed url={offering.calendly} />
                 </div>
               </div>

@@ -33,9 +33,11 @@ p {
   line-height: 1.3em;
 }
 
-a:hover {
-  color: $secondary;
+a {
   transition: ease color .3s;
+  &:hover {
+    color: $secondary;
+  }
 }
 
 footer {
@@ -98,7 +100,11 @@ footer {
 section {
   margin: 0 auto;
   width: 100%;
-  padding: 2em
+  padding: 2em;
+  
+  @media screen and (max-width: 768px) {
+    padding: 2em 1.25em;
+  }
 }
 // section > div {
 //   max-width: 1400px;
@@ -136,6 +142,7 @@ nav.mobile {
 
   a {
     font-family: $headings;
+    font-size: 1.4em;
     text-transform: none;
   }
 }
@@ -237,6 +244,13 @@ hr {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: all .4s ease;
+
+  &:hover {
+    background-color: $secondary;
+    transition: all .4s ease;
+    color: $red;
+  }
 }
 
 .inner-link {
@@ -292,6 +306,10 @@ section#contact {
 
   h1 {
     font-size: 4em;
+
+    @media screen and (max-width: 768px) {
+      font-size: 3.5em;
+    }
   }
 
   @media screen and (max-width: 768px) {

@@ -61,7 +61,10 @@ export default async function Home() {
           <img src="/icons/arrow-right.svg" className="inline-block mr-2" alt="Arrow right"/>
           About me
         </Link>
-        <p className='md:text-left quote'>{quote}</p>
+        <p className='md:text-left quote'>
+          <img src="/icons/flower-2.svg" className="inline-block mr-2 -translate-y-1" alt="Flower"/>
+          {quote}
+        </p>
       </section>
 
 
