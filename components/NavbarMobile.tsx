@@ -5,6 +5,8 @@ import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useWindowSize } from "@uidotdev/usehooks";
 import variables from '../styles/variables.module.scss';
+import { AnimatePresence } from "motion/react"
+import * as motion from "motion/react-client"
 
 
 export default function NavbarMobile() {
@@ -48,31 +50,30 @@ export default function NavbarMobile() {
           {isMenuVisible ? 'Close' : 'Menu'}
       </button>
 
-      <div 
-        className={`menu-panel flex justify-center items-center gt uppercase overflow-hidden`}
-        style={{
-          top: isMenuVisible ? 0 : '-40vh',
-          opacity: isMenuVisible ? 1 : 0,
-        }}>
-        <div 
-          className="flex items-center justify-end overflow-hidden"
-          style={{
-            // top: isMenuVisible ? 0 : '-40vh',
-            // opacity: isMenuVisible ? 1 : 0,
-          }}>
-          {/* <button 
-            className='close'
-            onClick={handleCloseBtnClick}>
-              Close
-          </button> */}
-        </div>
-        <ul className='flex items-center flex-col'>
-          <li><Link href='/' onClick={handleLinkClick}>Home</Link></li>
-          <li><Link href='/work-with-me' onClick={handleLinkClick}>Work with me</Link></li>
-          <li><Link href='/about' onClick={handleLinkClick}>About</Link></li>
-          <li><Link href='/contact' onClick={handleLinkClick}>Contact</Link></li>
-        </ul>
-      </div>
+      <AnimatePresence>
+        {isMenuVisible && 
+          <motion.div 
+            className={`menu-panel flex justify-center items-center gt uppercase overflow-hidden`}
+            style={{ top: 0 }}
+            initial={{ y: '-50vw' }}
+            animate={{ y: 0 }}
+            exit={{ y: '-50vh' }}
+            transition={{ duration: 0.7, stiffness: 30 }}
+            >
+            <div 
+              className="flex items-center justify-end overflow-hidden"
+              style={{
+              }}>
+            </div>
+            <ul className='flex items-center flex-col'>
+              <li><Link href='/' onClick={handleLinkClick}>Home</Link></li>
+              <li><Link href='/work-with-me' onClick={handleLinkClick}>Work with me</Link></li>
+              <li><Link href='/about' onClick={handleLinkClick}>About</Link></li>
+              <li><Link href='/contact' onClick={handleLinkClick}>Contact</Link></li>
+            </ul>
+          </motion.div>
+        }
+      </AnimatePresence>
     </nav>
   )
 }
