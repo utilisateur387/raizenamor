@@ -32,11 +32,11 @@ main#home {
 }
 
 #hp-bg-1 {
-  max-width: 400px;
-  width: 80%;
-  height: 500px;
+  // max-width: 400px;
+  // width: 80%;
+  height: -webkit-fill-available !important;
   object-fit: cover;
-  border-radius: 0% 10% 0% 10%;
+  // border-radius: 0% 10% 0% 10%;
 
   @media screen and (max-width: 767px) {
     border-radius: 0% 10% 0% 10%;

@@ -1,0 +1,86 @@
+.gt {
+  font-family: $headings;
+}
+
+h1 {
+  font-size: 5em;
+  line-height: .96em;
+  font-family: $headings;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5em;
+    line-height: 1em;
+  }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 6em;
+    line-height: .9em;
+  }
+}
+
+
+section#contact h1 {
+  font-size: 4em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.5em;
+  }
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  font-family: $headings;
+  line-height: 1em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1em;
+  }
+
+}
+
+h3.h3-title {
+  text-transform: uppercase;
+  text-align: center; 
+  margin-bottom: 3em;
+  font-size: 1.1em;
+  font-family: $body;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 1.4em;
+  line-height: 1.3em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1em;
+  }
+}
+
+a {
+  transition: ease color .3s;
+  font-size: 1.1em;
+  font-family: $body;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1em;
+
+  &:hover {
+    color: $secondary;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1em;
+  }
+}
+
+nav.mobile a {
+  font-family: $headings;
+  font-size: 1.4em;
+  text-transform: none;
+}
+
+.inner-link {
+  text-decoration: underline;
+}
+

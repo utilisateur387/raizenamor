@@ -55,9 +55,9 @@ export default function NavbarMobile() {
           <motion.div 
             className={`menu-panel flex justify-center items-center gt uppercase overflow-hidden`}
             style={{ top: 0 }}
-            initial={{ y: '-50vw' }}
+            initial={{ y: '-60vw' }}
             animate={{ y: 0 }}
-            exit={{ y: '-50vh' }}
+            exit={{ y: '-60vh' }}
             transition={{ duration: 0.7, stiffness: 30 }}
             >
             <div 

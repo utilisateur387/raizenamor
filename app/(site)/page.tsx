@@ -69,18 +69,26 @@ export default async function Home() {
 
 
       {/* WORK WITH ME */}
-      <section className="block md:flex section px-8 my-10 md:my-[8em] md:space-x-5" style={{height: '-webkit-fill-available'}}>
+      <section className="work-with-me block md:flex section mb-20 mt-16 md:my-10 md:my-[8em] md:space-x-5" style={{height: '-webkit-fill-available'}}>
 
         <div className="w-none lg:w-1/12"></div>
-        <div className="container-bg-1 w-full md:w-6/12 lg:w-5/12 flex items-center justify-center">
+        <div className="w-full md:w-6/12 lg:w-5/12 flex items-center justify-center">
           <Image 
-            src={backgroundImage1.url || ''} 
-            alt={backgroundImage1.alt || ''} 
+            src={backgroundImage2.url || ''} 
+            alt={backgroundImage2.alt || ''} 
             width={0}
             height={0}
-            className='w-full'
+            // className='w-full'
             sizes='100vw'
             id="hp-bg-1"
+
+            layout="responsive"
+            // width={300}
+            // height={400} // 16:10 aspect ratio
+            objectFit="cover"
+            style={{
+              height: 'auto'
+            }}
           />
         </div>       
 
@@ -100,6 +108,8 @@ export default async function Home() {
 
       {/* TESTIMONIALS */}
       <section className='section-padding section testimonials'>
+        <h3 className='h3-title'>Testimonials</h3>
+
         <div className="flex justify-start overflow-x-scroll space-x-12">
           {testimonials.map(testimonial => (
             <div className='testimonial-card text-left inline-block' key={testimonial._key}>
@@ -111,7 +121,7 @@ export default async function Home() {
       </section>
 
       {/* BACKGROUND IMAGE 2 */}
-      <div className='container-bg2 flex items-center'>
+      {/* <div className='container-bg2 flex items-center'>
         <Image 
           src={backgroundImage2.url || ''} 
           alt={backgroundImage2.alt || ''} 
@@ -120,7 +130,7 @@ export default async function Home() {
           className='w-full'
           sizes='100vw'
         />
-      </div>      
+      </div>       */}
     </main>
   )
 }

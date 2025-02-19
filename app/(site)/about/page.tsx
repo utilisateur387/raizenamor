@@ -13,6 +13,8 @@ export default async function About() {
     certificationText,
     certifications
   } = contentAbout;
+
+  // const firstParagraph = content[0].children;  
   
   return (
     <main id="about" className='section min-h-[90vh] overflow-hidden'>
@@ -29,13 +31,7 @@ export default async function About() {
           </Link>
         </div>
 
-        <div className="about-banner-image flex items-start justify-center"
-          // style={{
-          //   backgroundImage: `url(${portrait.url})`,
-          //   backgroundSize: 'cover',
-          //   backgroundPosition: 'center',
-          // }}
-          >
+        <div className="about-banner-image flex items-start justify-center">
             <Image
               src={portrait.url}
               width={0}
@@ -49,7 +45,7 @@ export default async function About() {
       </section>
 
       <section className='section-padding certifications relative'>
-        <h2 className='text-center uppercase mb-8'>Certifications</h2>
+        <h3 className='h3-title'>Certifications</h3>
 
         <div className="md:flex gap-12">
           <div className="hidden lg:block md:w-1/12"></div>
